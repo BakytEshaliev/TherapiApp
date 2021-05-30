@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/chat_bot"
+        android:title="Chat Bot" />
+
+    <item android:id="@+id/tagebuch"
+        android:title="Tagebuch" />
+
+    <item android:id="@+id/tagesziel"
+        android:title="Tagesziel" />
+
+    <item android:id="@+id/ubungen"
+        android:title="Übungen" />
+
+    <item android:id="@+id/wiki"
+        android:title="Wiki" />
+
+    <item android:id="@+id/kontakte"
+        android:title="Kontakte" />
+
+    <item android:id="@+id/einstellungen"
+        android:title="Einstellungen" />
+</menu>
