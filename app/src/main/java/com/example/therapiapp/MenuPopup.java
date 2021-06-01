@@ -35,7 +35,7 @@ public class MenuPopup implements PopupMenu.OnMenuItemClickListener {
                 System.out.println("wiki");
                 return true;
             case R.id.kontakte:
-                System.out.println("kontakte");
+                context.startActivity(MainActivity.kontactsIntent);
                 return true;
             case R.id.einstellungen:
                 System.out.println("einstellungen");

@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     public static final MenuPopup mainMenuPopup = new MenuPopup();
     public static Intent startseiteIntent;
     public static Intent chatbotIntent;
+    public static Intent kontactsIntent;
 
     public static Context myContext;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         startseiteIntent = new Intent(MainActivity.this, Startseite.class);
         chatbotIntent = new Intent(MainActivity.this, ChatBot.class);
+        kontactsIntent = new Intent(MainActivity.this, Kontakte.class);
 
         myContext = MainActivity.this;
 
