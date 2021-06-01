@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapiApp">
-        <activity android:name=".ChatBot"></activity>
+        <activity android:name=".Kontakte"></activity>
+        <activity android:name=".ChatBot" />
         <activity android:name=".KontactFormular" />
         <activity android:name=".Hilfe" />
         <activity android:name=".Profil" />
