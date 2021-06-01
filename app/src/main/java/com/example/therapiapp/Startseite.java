@@ -1,18 +1,24 @@
 package com.example.therapiapp;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.ActionProvider;
+import android.view.ContextMenu;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-public class Startseite extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
+public class Startseite extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +28,7 @@ public class Startseite extends AppCompatActivity implements PopupMenu.OnMenuIte
         Toolbar toolbar = findViewById(R.id.start_seite_toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("therapieapp");
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         if(getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -34,48 +40,23 @@ public class Startseite extends AppCompatActivity implements PopupMenu.OnMenuIte
             PopupMenu popup = new PopupMenu(this, v);
             MenuInflater inflater = popup.getMenuInflater();
             inflater.inflate(R.menu.nav_popup, popup.getMenu());
-            popup.setOnMenuItemClickListener(this);
+            popup.setOnMenuItemClickListener(MainActivity.mainMenuPopup);
             popup.show();
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.startseite_menu, menu);
-        return true;
+    public void toProfil(View v) {
+        Intent intent = new Intent(this, Profil.class);
+        this.startActivity(intent);
     }
 
-    @Override
-    public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.chat_bot:
-                System.out.println("chat_bot");
-                return true;
-            case R.id.tagebuch:
-                System.out.println("tagebuch");
-                return true;
-            case R.id.tagesziel:
-                System.out.println("tagesziel");
-                return true;
-            case R.id.ubungen:
-                System.out.println("ubungen");
-                return true;
-            case R.id.wiki:
-                System.out.println("wiki");
-                return true;
-            case R.id.kontakte:
-                System.out.println("kontakte");
-                return true;
-            case R.id.einstellungen:
-                System.out.println("einstellungen");
-                return true;
-            default:
-                return false;
-        }
+    public void toHilfe(View v) {
+        Intent intent = new Intent(this, Hilfe.class);
+        this.startActivity(intent);
     }
 
     public void toChatBot(View v) {
-        System.out.println("chat_bot");
+        this.startActivity(MainActivity.chatbotIntent);
     }
 
     public void toTagebuch(View v) {
