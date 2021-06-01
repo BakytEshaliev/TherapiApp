@@ -7,100 +7,142 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-Mail:"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="286dp"
+        android:text="Passwort:"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="176dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="301dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
         android:ems="10"
         android:hint="E-Mail eingeben"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="207dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password eingeben"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="295dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Passwort:"
-        android:textColor="@color/black"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="263dp" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mit Google anmelden"
-        android:textColor="@color/black"
-        app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="399dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrieren"
-        android:textColor="#2196F3"
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="550dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Anmelden"
-        android:textColor="#2196F3"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="550dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="App-Name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="44dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="225dp"
         android:text="Oder Anmelden mit:"
         android:textColor="@color/black"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="356dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="307dp"
+        android:text="E-Mail:"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="139dp"
+        android:ems="10"
+        android:hint="Password eingeben"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="150dp"
         android:text="Mit Facebook anmelden"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="460dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="165dp"
+        android:text="Mit Google anmelden"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="143dp"
+        android:text="App-Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Registrieren"
+            android:textColor="#2196F3" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Anmelden"
+            android:textColor="#2196F3" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
