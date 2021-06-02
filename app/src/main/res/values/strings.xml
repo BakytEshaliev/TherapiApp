@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TherapiApp</string>
+    <string-array name="data">
+        <item>Gesichterkennung</item>
+        <item>Notfallkontakt</item>
+    </string-array>
+    <string-array name="data2">
+        <item>Notfallkontakt</item>
+        <item>Notfallkontakt</item>
+    </string-array>
 </resources>
