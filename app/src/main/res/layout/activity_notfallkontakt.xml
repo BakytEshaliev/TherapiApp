@@ -41,4 +41,12 @@
         app:layout_constraintTop_toTopOf="@+id/start_seite_toolbar4"
         app:layout_constraintVertical_bias="0.666" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_refresh_button_black"
+        tools:layout_editor_absoluteX="338dp"
+        tools:layout_editor_absoluteY="8dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
