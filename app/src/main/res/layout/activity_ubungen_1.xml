@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/start_seite_toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@android:color/white">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:onClick="toHilfe"
+            android:text="Hilfe"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="|"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="320dp"
+            tools:layout_editor_absoluteY="18dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:onClick="toProfil"
+            android:text="Profil"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="4dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_notfallkontakt" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="229dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="4dp"
+        android:text="Übungen"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_back_arrow_black_2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+        app:layout_constraintStart_toEndOf="@+id/textView71"
+        app:layout_constraintTop_toTopOf="@+id/textView71"
+        app:srcCompat="@mipmap/ic_refresh_button_black" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:text="Übungsname"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView73"
+        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:text="Übungsname"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView75"
+        app:layout_constraintTop_toBottomOf="@+id/textView75" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:text="Übungsname"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView74"
+        app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="196dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Übungsname"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:text="Übungsname"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox5"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="Tagesziel"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="@+id/start_seite_toolbar4"
+        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar4" />
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="192dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:text="Offene Übungen"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="294dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:text="Abgeschlossene Übungen"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
