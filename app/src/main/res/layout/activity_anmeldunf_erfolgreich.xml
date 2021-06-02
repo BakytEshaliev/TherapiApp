@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/start_seite_toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@android:color/white">
+
+        <Button
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:onClick="toHilfe"
+            android:text="Hilfe"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView31"
+            tools:layout_editor_absoluteX="320dp"
+            tools:layout_editor_absoluteY="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="|"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:onClick="toProfil"
+            android:text="Profil"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView65"
+        android:layout_width="325dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="268dp"
+        android:text="Anmeldung erfolgreich"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar3" />
+
+    <TextView
+        android:id="@+id/textView67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Weiter"
+        android:textColor="#2196F3"
+        app:layout_constraintEnd_toEndOf="@+id/textView66"
+        app:layout_constraintTop_toBottomOf="@+id/textView66" />
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="324dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="4dp"
+        android:text="Sie haben sich erfolgreich bei App-Name angemeldet! Sie können nun fortfahren mit der Benutzung unserer App"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView65"
+        app:layout_constraintStart_toStartOf="@+id/textView65"
+        app:layout_constraintTop_toBottomOf="@+id/textView65" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
