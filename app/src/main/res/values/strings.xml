@@ -8,4 +8,16 @@
         <item>Notfallkontakt</item>
         <item>Notfallkontakt</item>
     </string-array>
+    <string-array name="data3">
+        <item>Bewertung Tagesziel</item>
+        <item>Notfallkontakt</item>
+    </string-array>
+    <string-array name="data4">
+        <item>Monatsübersicht</item>
+        <item>Notfallkontakt</item>
+    </string-array>
+    <string-array name="data5">
+        <item>Durchschnittlicher Gemütszustand</item>
+        <item>Notfallkontakt</item>
+    </string-array>
 </resources>

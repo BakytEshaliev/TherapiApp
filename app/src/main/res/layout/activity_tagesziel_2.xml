@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/toolbar4"
         android:layout_width="409dp"
@@ -51,7 +50,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="82dp"
             android:layout_marginBottom="5dp"
-            android:text="App-Name"
+            android:text="Tagesziel"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,182 +114,97 @@
             tools:layout_editor_absoluteY="4dp" />
     </androidx.appcompat.widget.Toolbar>
 
-
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="65dp"
-        app:columnCount="2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
-        app:rowCount="5">
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="50dp"
-            android:text="Helles / Dunkles Design"
-            android:textStyle="bold"
-            app:layout_column="0"
-            app:layout_row="0" />
-
-        <TextView
-            android:id="@+id/textView76"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:text="Schriftgröße"
-            android:textStyle="bold"
-            app:layout_column="0"
-            app:layout_row="1" />
-
-        <Switch
-            android:id="@+id/switch2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_column="1"
-            app:layout_row="0" />
-
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_column="1"
-            app:layout_row="1" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="20dp"
-            app:layout_column="0"
-            app:layout_row="2">
-
-            <TextView
-                android:id="@+id/textView78"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Appsperrung einrichten"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/data" />
-
-        </LinearLayout>
-
-        <Switch
-            android:id="@+id/switch4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_column="1"
-            app:layout_row="2" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="20dp"
-            app:layout_column="0"
-            app:layout_row="3">
-
-            <TextView
-                android:id="@+id/textView83"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Benachrichtungen"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView81"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mitteilungen" />
-
-            <TextView
-                android:id="@+id/textView82"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Erinnerung an Tagesziele" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_column="1"
-            app:layout_row="3">
-
-            <Switch
-                android:id="@+id/switch5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <Switch
-                android:id="@+id/switch7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_column="1"
-                app:layout_row="2" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="20dp"
-            app:layout_column="0"
-            app:layout_row="4">
-
-            <TextView
-                android:id="@+id/textView77"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Notfallkontakte"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView79"
-                android:layout_width="210dp"
-                android:layout_height="99dp"
-                android:text="Wenn aktiviert wird bei Bestätigung der Notfallkontaktseite noch 10s in denen keine Handlung folgt der ausgewählte Kontakt alamiert" />
-
-            <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/data2" />
-        </LinearLayout>
-
-        <Switch
-            android:id="@+id/switch8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_column="1"
-            app:layout_row="4" />
-
-    </androidx.gridlayout.widget.GridLayout>
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="175dp"
-        android:text="Einstellungen"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="521dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar4" />
+        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar4">
 
+        <TextView
+            android:id="@+id/textView92"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heute"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/textView86"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Titel des Ziels"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="Eine kurze Beschreibung des Ziels\n\n" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/data3" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:text="Erreichtes Ergebnis des Ziels" />
+
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Beschreibung"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:text="Beschreibung wie man sich bzgl. des Ergebnisse fühlt, ob man glücklich ist oder traurig, dass man es vielleicht nicht erreicht hat. Eventuell genauere Beschreibung zu der Bewerbung des Tagesziels." />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:text="Abbrechen" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Speichern" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
