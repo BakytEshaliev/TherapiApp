@@ -24,6 +24,7 @@ public class MenuPopup implements PopupMenu.OnMenuItemClickListener {
                 return true;
             case R.id.tagebuch:
                 System.out.println("tagebuch");
+
                 return true;
             case R.id.tagesziel:
                 System.out.println("tagesziel");

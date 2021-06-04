@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include layout="@layout/toolbar_3" />
+
+    <include
+        android:id="@+id/include15"
+        layout="@layout/toolbar_2" />
     <CheckBox
         android:id="@+id/checkBox7"
         android:layout_width="155dp"
@@ -103,112 +108,6 @@
         app:layout_constraintStart_toStartOf="@+id/checkBox4"
         app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/start_seite_toolbar4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
-        app:theme="@style/ToolbarColoredBackArrow"
-        app:titleTextColor="@android:color/white">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toHilfe"
-            android:text="Hilfe"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="|"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="320dp"
-            tools:layout_editor_absoluteY="18dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toProfil"
-            android:text="Profil"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_notfallkontakt" />
-
-    <TextView
-        android:id="@+id/textView71"
-        android:layout_width="229dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="4dp"
-        android:text="Übungen"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_back_arrow_black_2" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
-        app:layout_constraintStart_toEndOf="@+id/textView71"
-        app:layout_constraintTop_toTopOf="@+id/textView71"
-        app:srcCompat="@mipmap/ic_refresh_button_black" />
-
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="155dp"
@@ -245,14 +144,14 @@
         android:id="@+id/textView73"
         android:layout_width="335dp"
         android:layout_height="71dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="36dp"
         android:text='Hier Würde der Titel "Ubungen gegen ... " stehen'
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/start_seite_toolbar4"
-        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar4" />
+        app:layout_constraintTop_toBottomOf="@+id/include15" />
 
     <TextView
         android:id="@+id/textView75"
@@ -265,17 +164,5 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/checkBox3"
         app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="54dp"
-        android:layout_height="37dp"
-        app:layout_constraintBottom_toBottomOf="@+id/start_seite_toolbar4"
-        app:layout_constraintEnd_toEndOf="@+id/start_seite_toolbar4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/start_seite_toolbar4"
-        app:layout_constraintTop_toTopOf="@+id/start_seite_toolbar4"
-        app:layout_constraintVertical_bias="0.631"
-        app:srcCompat="@drawable/ic_menu_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

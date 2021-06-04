@@ -6,66 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ChatBot">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/start_seite_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ToolbarColoredBackArrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white">
+    <include layout="@layout/toolbar_3" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toHilfe"
-            android:text="Hilfe"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="|"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="320dp"
-            tools:layout_editor_absoluteY="18dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toProfil"
-            android:text="Profil"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-    </androidx.appcompat.widget.Toolbar>
+    <include
+        android:id="@+id/include7"
+        layout="@layout/toolbar_2" />
 
     <TextView
         android:id="@+id/textView49"
         android:layout_width="236dp"
         android:layout_height="68dp"
-        android:layout_marginStart="87dp"
         android:layout_marginTop="92dp"
-        android:layout_marginEnd="88dp"
         android:text="Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest."
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/include7" />
 
     <TextView
         android:id="@+id/textView52"

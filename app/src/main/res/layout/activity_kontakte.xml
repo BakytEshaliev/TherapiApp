@@ -6,64 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ChatBot">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/start_seite_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/ToolbarColoredBackArrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white">
+    <include
+        android:id="@+id/include10"
+        layout="@layout/toolbar_1" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toHilfe"
-            android:text="Hilfe"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="|"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="320dp"
-            tools:layout_editor_absoluteY="18dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toProfil"
-            android:text="Profil"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-    </androidx.appcompat.widget.Toolbar>
+    <include
+        android:id="@+id/include11"
+        layout="@layout/toolbar_2" />
 
     <LinearLayout
         android:id="@+id/head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp"
+        android:layout_width="306dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="47dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/foot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/include11">
 
         <TextView
             android:id="@+id/textView48"
@@ -115,12 +74,23 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:text="0 152 3853…" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:capitalize="words"
+            android:gravity="bottom"
+            android:text="Kontakte aus Kontaktliste hinzufugen"
+            android:textAllCaps="false" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/foot"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="32dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,21 +98,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/head">
 
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:capitalize="words"
-            android:text="Kontakte aus Kontaktliste hinzufugen"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:capitalize="words"
-            android:text="Notfallkontakte"
-            android:textAllCaps="false" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="151dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="146dp"
+        android:capitalize="words"
+        android:text="Notfallkontakte"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

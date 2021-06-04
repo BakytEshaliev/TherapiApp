@@ -4,128 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/toolbar4"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <include layout="@layout/toolbar_1" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_notfallkontakt" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.979"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_refresh_button_black" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="82dp"
-            android:layout_marginBottom="5dp"
-            android:text="App-Name"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView11"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/start_seite_toolbar4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:theme="@style/ToolbarColoredBackArrow"
-        app:titleTextColor="@android:color/white">
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="61dp"
-            android:layout_height="44dp"
-            app:srcCompat="@drawable/ic_menu_button"
-            tools:layout_editor_absoluteX="411dp"
-            tools:layout_editor_absoluteY="58dp" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:text="Hilfe"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="|"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="320dp"
-            tools:layout_editor_absoluteY="18dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@android:color/transparent"
-            android:onClick="toProfil"
-            android:text="Profil"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            tools:layout_editor_absoluteX="82dp"
-            tools:layout_editor_absoluteY="4dp" />
-    </androidx.appcompat.widget.Toolbar>
-
+    <include
+        android:id="@+id/include25"
+        layout="@layout/toolbar_2" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="236dp"
         android:layout_height="308dp"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="85dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_seite_toolbar4">
+        app:layout_constraintTop_toBottomOf="@+id/include25">
 
         <TextView
             android:id="@+id/textView10"
