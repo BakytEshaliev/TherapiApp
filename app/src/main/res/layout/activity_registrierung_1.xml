@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/include25"
-        layout="@layout/toolbar_2" />
+        layout="@layout/toolbar_bottom" />
 
     <LinearLayout
         android:id="@+id/linearLayout"

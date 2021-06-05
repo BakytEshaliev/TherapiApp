@@ -11,7 +11,7 @@
 
     <include
         android:id="@+id/include26"
-        layout="@layout/toolbar_2" />
+        layout="@layout/toolbar_bottom" />
 
     <TextView
         android:id="@+id/textView6"
@@ -136,6 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:onClick="toStartseite"
             android:text="Anmelden"
             android:textColor="#2196F3" />
 

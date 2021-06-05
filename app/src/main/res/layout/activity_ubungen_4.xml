@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/include13"
-        layout="@layout/toolbar_2" />
+        layout="@layout/toolbar_bottom" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine2"

@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/include8"
-        layout="@layout/toolbar_2" />
+        layout="@layout/toolbar_bottom" />
     <CheckBox
         android:id="@+id/checkBox4"
         android:layout_width="343dp"

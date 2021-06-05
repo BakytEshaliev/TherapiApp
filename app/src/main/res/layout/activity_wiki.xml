@@ -7,7 +7,7 @@
 
     <include layout="@layout/toolbar_3" />
 
-    <include layout="@layout/toolbar_2" />
+    <include layout="@layout/toolbar_bottom" />
     <TextView
         android:id="@+id/textView73"
         android:layout_width="335dp"

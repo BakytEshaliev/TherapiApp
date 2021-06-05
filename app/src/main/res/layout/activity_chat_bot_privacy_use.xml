@@ -9,8 +9,8 @@
     <include layout="@layout/toolbar_3" />
 
     <include
-        android:id="@+id/include9"
-        layout="@layout/toolbar_2" />
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom" />
 
     <TextView
         android:id="@+id/textView49"
