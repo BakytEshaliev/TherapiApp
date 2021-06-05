@@ -3,6 +3,8 @@ package com.example.therapiapp;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class KontactFormular extends BaseActivity {
 
@@ -11,6 +13,15 @@ public class KontactFormular extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kontact_formular);
         initToolbar();
+
+        String[] arraySpinner = new String[] {
+                "Feedback", "Problem", "Fehler"
+        };
+        Spinner s = (Spinner) findViewById(R.id.spinnerKontakt);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, arraySpinner);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        s.setAdapter(adapter);
     }
 
     public void abbrechen(View v) {
