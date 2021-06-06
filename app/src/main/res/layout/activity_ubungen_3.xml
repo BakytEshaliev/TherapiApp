@@ -73,8 +73,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="338dp"
-        android:layout_height="144dp"
+        android:layout_width="341dp"
+        android:layout_height="91dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="386dp">

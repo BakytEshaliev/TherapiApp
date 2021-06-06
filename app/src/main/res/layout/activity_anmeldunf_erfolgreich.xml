@@ -11,36 +11,56 @@
         android:id="@+id/include22"
         layout="@layout/toolbar_bottom" />
 
-    <TextView
-        android:id="@+id/textView65"
-        android:layout_width="325dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="144dp"
-        android:text="Anmeldung erfolgreich"
-        android:textSize="20sp"
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="319dp"
+        android:layout_height="113dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include22" />
+        app:layout_constraintTop_toBottomOf="@+id/include22"
+        app:layout_constraintVertical_bias="0.479">
 
-    <TextView
-        android:id="@+id/textView67"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Weiter"
-        android:textColor="#2196F3"
-        app:layout_constraintEnd_toEndOf="@+id/textView66"
-        app:layout_constraintTop_toBottomOf="@+id/textView66" />
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:text="Anmeldung erfolgreich"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include22" />
 
-    <TextView
-        android:id="@+id/textView66"
-        android:layout_width="324dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="4dp"
-        android:text="Sie haben sich erfolgreich bei App-Name angemeldet! Sie können nun fortfahren mit der Benutzung unserer App"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView65"
-        app:layout_constraintStart_toStartOf="@+id/textView65"
-        app:layout_constraintTop_toBottomOf="@+id/textView65" />
+        <TextView
+            android:id="@+id/textView64"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:text="Sie haben sich erfolgreich bei App-Name angemeldet! Sie können nun fortfahren mit der Benutzung unserer App"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView65"
+            app:layout_constraintStart_toStartOf="@+id/textView65"
+            app:layout_constraintTop_toBottomOf="@+id/textView65" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="52dp"
+        android:layout_height="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weiter"
+            android:textColor="#2196F3"
+            app:layout_constraintEnd_toEndOf="@+id/textView66"
+            app:layout_constraintTop_toBottomOf="@+id/textView66" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
