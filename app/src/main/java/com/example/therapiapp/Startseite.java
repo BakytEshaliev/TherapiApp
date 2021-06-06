@@ -19,18 +19,22 @@ public class Startseite extends BaseActivity {
     }
 
     public void toTagebuch(View v) {
-        System.out.println("tagebuch");
+        Intent intent = new Intent(this, Tagebuch.class);
+        this.startActivity(intent);;
     }
 
     public void toTagesziel(View v) {
-        System.out.println("tagesziel");
+        Intent intent = new Intent(this, Tagesziel.class);
+        this.startActivity(intent);;
     }
 
     public void toUbungen(View v) {
-        System.out.println("ubungen");
+        Intent intent = new Intent(this, Ubungen.class);
+        this.startActivity(intent);;
     }
 
     public void toWiki(View v) {
-        System.out.println("wiki");
+        Intent intent = new Intent(this, Wiki.class);
+        this.startActivity(intent);;
     }
 }
