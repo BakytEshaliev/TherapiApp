@@ -6,11 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Startseite">
 
-    <include layout="@layout/toolbar_1" />
+    <include
+        android:id="@+id/include18"
+        layout="@layout/toolbar_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_bottom" />
+        layout="@layout/toolbar_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include18" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -18,7 +26,9 @@
         android:layout_marginStart="43dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="38dp"
+        android:layout_marginBottom="74dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">

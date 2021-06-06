@@ -7,7 +7,10 @@
 
     <include
         android:id="@+id/include24"
-        layout="@layout/toolbar_3" />
+        layout="@layout/toolbar_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,7 +18,9 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="35dp"
+        android:layout_marginBottom="182dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

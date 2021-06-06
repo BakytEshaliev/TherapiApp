@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Profil">
 
-    <include layout="@layout/toolbar_3" />
+    <include
+        android:id="@+id/toolbar_top"
+        layout="@layout/toolbar_3" />
 
     <include
         android:id="@+id/toolbar"

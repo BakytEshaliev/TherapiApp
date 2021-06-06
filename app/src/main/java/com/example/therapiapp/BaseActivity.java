@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public abstract class BaseActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
@@ -72,6 +75,9 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
             default:
                 return false;
         }
+    }
+    public void back(View view){
+        onBackPressed();
     }
 
     @Override

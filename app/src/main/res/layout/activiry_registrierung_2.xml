@@ -5,80 +5,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/toolbar_3" />
+    <include
+        android:id="@+id/include20"
+        layout="@layout/toolbar_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/include5"
-        layout="@layout/toolbar_bottom" />
-    <TextView
-        android:id="@+id/textView61"
-        android:layout_width="325dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="8dp"
-        android:text="Ihnen wurde ein Code per E-Mail gesendet. \n Bitte geben Sie diesen hier ein um Ihre E-Mail zu bestätigen und den Account zu aktivieren"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView62"
-        app:layout_constraintEnd_toEndOf="@+id/textView60"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView60"
-        app:layout_constraintTop_toBottomOf="@+id/textView60"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView60"
-        android:layout_width="325dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="180dp"
-        android:text="Code Bestätigung"
-        android:textSize="20sp"
+        layout="@layout/toolbar_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include5" />
+        app:layout_constraintTop_toBottomOf="@+id/include20" />
 
-    <TextView
-        android:id="@+id/textView62"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="256dp"
-        android:text="Hier Code eingeben:"
-        android:textSize="20sp"
+    <LinearLayout
+        android:layout_width="358dp"
+        android:layout_height="372dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView61"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView61" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include5"
+        app:layout_constraintVertical_bias="0.347">
 
-    <TextView
-        android:id="@+id/textView64"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="180dp"
-        android:text="Bestätigen"
-        android:textColor="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView63" />
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="363dp"
+            android:layout_height="50dp"
+            android:text="Hier Code eingeben:"
+            android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView63"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginBottom="180dp"
-        android:text="Code erneut senden"
-        android:textColor="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="325dp"
+            android:layout_height="63dp"
+            android:text="Ihnen wurde ein Code per E-Mail gesendet. \n Bitte geben Sie diesen hier ein um Ihre E-Mail zu bestätigen und den Account zu aktivieren"
+            android:textSize="16sp" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="325dp"
-        android:layout_height="56dp"
-        android:hint="Code eingeben"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView62"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView62"
-        app:layout_constraintTop_toBottomOf="@+id/textView62"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="325dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="20dp"
+            android:text="Code Bestätigung"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="325dp"
+            android:layout_height="56dp"
+            android:hint="Code eingeben" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code erneut senden"
+                android:textColor="#2196F3" />
+
+            <TextView
+                android:id="@+id/bestaetigenTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:clickable="true"
+                android:onClick="handleBestaetigen"
+                android:text="Bestätigen"
+                android:textColor="#2196F3" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
