@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Registrierung2 extends AppCompatActivity {
+public class Registrierung2 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class Registrierung2 extends AppCompatActivity {
 
     public void handleBestaetigen(View view){
         System.out.println("Bestaetigen");
+        Toast.makeText(this,"asdasd",Toast.LENGTH_SHORT).show();
     }
 
 }

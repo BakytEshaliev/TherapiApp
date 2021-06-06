@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapiApp">
-        <activity android:name=".Registrierung2"></activity>
-        <activity android:name=".Registrieren" />
+        <activity android:name=".Registrierung2" />
         <activity android:name=".Datenschutz" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Kontakte" />
+        <activity android:name=".Wiki" />
         <activity android:name=".ChatBot" />
         <activity android:name=".KontactFormular" />
         <activity android:name=".Hilfe" />

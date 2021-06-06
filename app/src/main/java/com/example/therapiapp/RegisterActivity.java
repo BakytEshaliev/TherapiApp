@@ -27,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void toRegistrieren(View view){
-        Intent intent = new Intent(this, Registrieren.class);
+        Intent intent = new Intent(this, Registrierung2.class);
         this.startActivity(intent);
     }
 
