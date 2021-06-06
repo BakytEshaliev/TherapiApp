@@ -44,9 +44,10 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.startseite:
-                Intent intent = new Intent(this, Startseite.class);
+                intent = new Intent(this, Startseite.class);
                 this.startActivity(intent);
                 return true;
             case R.id.chat_bot:
@@ -54,23 +55,28 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
                 this.startActivity(intent);
                 return true;
             case R.id.tagebuch:
-                System.out.println("tagebuch");
+                intent = new Intent(this, Tagebuch.class);
+                this.startActivity(intent);;
                 return true;
             case R.id.tagesziel:
-                System.out.println("tagesziel");
+                intent = new Intent(this, Tagesziel.class);
+                this.startActivity(intent);;
                 return true;
             case R.id.ubungen:
-                System.out.println("ubungen");
+                intent = new Intent(this, Ubungen.class);
+                this.startActivity(intent);;
                 return true;
             case R.id.wiki:
-                System.out.println("wiki");
+                intent = new Intent(this, Wiki.class);
+                this.startActivity(intent);;
                 return true;
             case R.id.kontakte:
                 intent = new Intent(this, Kontakte.class);
                 this.startActivity(intent);
                 return true;
             case R.id.einstellungen:
-                System.out.println("einstellungen");
+                intent = new Intent(this, Einstellungen.class);
+                this.startActivity(intent);
                 return true;
             default:
                 return false;
