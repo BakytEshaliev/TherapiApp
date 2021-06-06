@@ -18,15 +18,21 @@
         android:layout_margin="32dp"
         android:layout_marginTop="207dp"
         android:orientation="vertical"
+        android:paddingStart="2dp"
+        android:paddingLeft="2dp"
+        android:paddingEnd="2dp"
+        android:paddingRight="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include17">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
             android:id="@+id/textView30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_marginBottom="32dp"
             android:text="Hilfe"
             android:textSize="24sp"
@@ -36,20 +42,28 @@
             android:id="@+id/spinnerKontakt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/spinner_border"
+            android:elevation="1.5dp"
+            android:tooltipText="Rückmeldungsgrund"
             android:scrollbarStyle="outsideInset" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_marginBottom="20dp"
-            android:ems="10"
+            android:background="@drawable/edit_text_border"
+            android:elevation="1.5dp"
             android:gravity="start|top"
+            android:hint="Hier Rückmeldenachricht eingeben"
             android:inputType="textMultiLine"
             android:shadowColor="#958F8F"
-            android:text="Hier Rückmeldenachricht eingeben"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,14 +77,18 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="abbrechen"
-                android:text="Abbrechen" />
+                android:text="Abbrechen"
+                app:backgroundTint="@color/white"
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Abschicken" />
+                android:text="Abschicken"
+                app:backgroundTint="@color/white"
+                android:textAllCaps="false"/>
         </LinearLayout>
 
     </LinearLayout>

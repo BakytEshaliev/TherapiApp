@@ -51,7 +51,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_refresh_button_black" />
+            app:srcCompat="@mipmap/ic_refresh_button_black"
+            android:backgroundTint="@android:color/transparent"/>
 
         <TextView
             android:id="@+id/toolbar_title"

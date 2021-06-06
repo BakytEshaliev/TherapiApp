@@ -18,11 +18,11 @@
         android:id="@+id/head"
         android:layout_width="306dp"
         android:layout_height="415dp"
-        android:layout_marginTop="47dp"
+        android:layout_margin="40dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include11">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <TextView
             android:id="@+id/textView48"
@@ -77,13 +77,12 @@
 
         <Button
             android:id="@+id/button16"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:capitalize="words"
-            android:gravity="bottom"
             android:text="Kontakte aus Kontaktliste hinzufugen"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            app:backgroundTint="@color/white" />
 
     </LinearLayout>
 
@@ -103,16 +102,16 @@
     <Button
         android:id="@+id/button17"
         android:layout_width="151dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="115dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="146dp"
-        android:capitalize="words"
+        android:layout_marginBottom="40dp"
         android:text="Notfallkontakte"
         android:textAllCaps="false"
+        app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/head" />
 

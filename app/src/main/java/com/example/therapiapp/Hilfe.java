@@ -1,7 +1,9 @@
 package com.example.therapiapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Hilfe extends BaseActivity {
 
@@ -10,6 +12,11 @@ public class Hilfe extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hilfe);
         initToolbar();
+    }
+
+    public void toKontaktFormular(View v) {
+        Intent intent = new Intent(this, KontactFormular.class);
+        this.startActivity(intent);
     }
 
     @Override
