@@ -13,7 +13,7 @@ public class Registrierung2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activiry_registrierung_2);
-        TextView bestaetigenTextView = findViewById(R.id.bestaetigenTextView);
+//        TextView bestaetigenTextView = findViewById(R.id.bestaetigenTextView);
 
 
     }
