@@ -6,82 +6,103 @@
     android:layout_height="match_parent"
     tools:context=".Registrierung2">
 
-    <include
-        android:id="@+id/include20"
-        layout="@layout/toolbar_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/toolbar_3" />
 
     <include
         android:id="@+id/include5"
-        layout="@layout/toolbar_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include20" />
+        layout="@layout/toolbar_3" />
 
     <LinearLayout
-        android:layout_width="358dp"
-        android:layout_height="372dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="351dp"
+        android:layout_height="245dp"
+        android:layout_marginTop="116dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include5"
-        app:layout_constraintVertical_bias="0.347">
+        app:layout_constraintVertical_bias="0.232">
 
         <TextView
-            android:id="@+id/textView62"
-            android:layout_width="363dp"
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Code Bestätigung"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include5" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20"
+            android:text="Ihnen wurde ein Code per E-Mail gesendet. \nBitte geben Sie diesen hier ein um Ihre E-Mail zu bestätigen und den Account zu aktivieren"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView62"
+            app:layout_constraintEnd_toEndOf="@+id/textView60"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView60"
+            app:layout_constraintTop_toBottomOf="@+id/textView60"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Hier Code eingeben:"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textView61"
-            android:layout_width="325dp"
-            android:layout_height="63dp"
-            android:text="Ihnen wurde ein Code per E-Mail gesendet. \n Bitte geben Sie diesen hier ein um Ihre E-Mail zu bestätigen und den Account zu aktivieren"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView60"
-            android:layout_width="325dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="20dp"
-            android:text="Code Bestätigung"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView61"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView61" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="325dp"
+            android:id="@+id/textInputEditText2"
+            android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:hint="Code eingeben" />
+            android:hint="Code eingeben"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView62"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView62"
+            app:layout_constraintTop_toBottomOf="@+id/textView62"
+            app:layout_constraintVertical_bias="0.0" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="221dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <TextView
+            android:id="@+id/textView71"
+            android:layout_width="74dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal">
+            android:layout_marginStart="0"
+            android:layout_marginBottom="0"
+            android:layout_weight="1"
+            android:text="Code erneut senden"
+            android:textColor="#2196F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Code erneut senden"
-                android:textColor="#2196F3" />
+        <TextView
+            android:id="@+id/textView87"
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bestätigen"
+            android:textColor="#2196F3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView63" />
 
-            <TextView
-                android:id="@+id/bestaetigenTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:clickable="true"
-                android:onClick="handleBestaetigen"
-                android:text="Bestätigen"
-                android:textColor="#2196F3" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

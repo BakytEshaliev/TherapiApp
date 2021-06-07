@@ -9,93 +9,105 @@
 
     <include
         android:id="@+id/include16"
-        layout="@layout/toolbar_bottom" />
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="196dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="20dp"
-        android:text="Übungsname"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView73"
-        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+        layout="@layout/toolbar_3" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="196dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="32dp"
-        android:text="Übungsname"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView75"
-        app:layout_constraintTop_toBottomOf="@+id/textView75" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="196dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="24dp"
-        android:text="Übungsname"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView74"
-        app:layout_constraintTop_toBottomOf="@+id/textView74" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="196dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:text="Übungsname"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="196dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="32dp"
-        android:text="Übungsname"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-
-    <TextView
-        android:id="@+id/textView73"
-        android:layout_width="118dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="32dp"
-        android:text="Tagesziel"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="354dp"
+        android:layout_height="543dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include16" />
+        app:layout_constraintTop_toBottomOf="@+id/include16"
+        app:layout_constraintVertical_bias="0.138">
 
-    <TextView
-        android:id="@+id/textView74"
-        android:layout_width="192dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="24dp"
-        android:text="Offene Übungen"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        <TextView
+            android:id="@+id/textView102"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Tagesziel"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.211"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include16" />
 
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="294dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="32dp"
-        android:text="Abgeschlossene Übungen"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        <CheckBox
+            android:id="@+id/checkBox14"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:text="Übungsname"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView73"
+            app:layout_constraintTop_toBottomOf="@+id/textView73" />
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:text="Offene Übungen"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <CheckBox
+            android:id="@+id/checkBox15"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:text="Übungsname"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView74"
+            app:layout_constraintTop_toBottomOf="@+id/textView74" />
+
+        <CheckBox
+            android:id="@+id/checkBox16"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="32dp"
+            android:text="Übungsname"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/checkBox5"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+        <CheckBox
+            android:id="@+id/checkBox17"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Übungsname"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/checkBox4"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+        <TextView
+            android:id="@+id/textView104"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="32dp"
+            android:text="Abgeschlossene Übungen"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/checkBox3"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+        <CheckBox
+            android:id="@+id/checkBox18"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="32dp"
+            android:text="Übungsname"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView75"
+            app:layout_constraintTop_toBottomOf="@+id/textView75" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
