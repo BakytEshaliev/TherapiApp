@@ -37,7 +37,7 @@
     <include layout="@layout/toolbar_3" />
 
     <include
-        android:id="@+id/include5"
+        android:id="@+id/toolbar"
         layout="@layout/toolbar_bottom" />
 
     <TextView

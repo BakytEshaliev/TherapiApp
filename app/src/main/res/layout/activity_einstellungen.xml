@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Einstellungen">
 
     <include layout="@layout/toolbar_3" />
 
 
     <include
-        android:id="@+id/include3"
+        android:id="@+id/toolbar"
         layout="@layout/toolbar_bottom"
         tools:layout_editor_absoluteX="30dp"
         tools:layout_editor_absoluteY="0dp" />
@@ -27,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include3" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="wrap_content"

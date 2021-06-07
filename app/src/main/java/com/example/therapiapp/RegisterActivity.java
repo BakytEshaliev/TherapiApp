@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_registrierung_1);
+        initToolbar();
     }
 
     public void toDatenschutz(View view){

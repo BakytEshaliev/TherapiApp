@@ -13,14 +13,14 @@ public class Registrierung2 extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activiry_registrierung_2);
+        initToolbar();
 
 
 
     }
 
     public void handleBestaetigen(View view){
-        System.out.println("Bestaetigen");
-        Toast.makeText(this,"asdasd",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Sie haben den Code bestätigt",Toast.LENGTH_SHORT).show();
     }
 
 }
