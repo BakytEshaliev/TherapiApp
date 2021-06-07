@@ -37,8 +37,8 @@
     <include layout="@layout/toolbar_3" />
 
     <include
-        android:id="@+id/include15"
-        layout="@layout/toolbar_3" />
+        android:id="@+id/include5"
+        layout="@layout/toolbar_bottom" />
 
     <TextView
         android:id="@+id/textView73"

@@ -41,6 +41,7 @@
         android:id="@+id/checkBox13"
         android:layout_width="30dp"
         android:layout_height="43dp"
+        android:layout_marginStart="4dp"
         android:textSize="96sp"
         app:layout_constraintStart_toStartOf="@+id/textView76"
         app:layout_constraintTop_toTopOf="@+id/textView73" />
