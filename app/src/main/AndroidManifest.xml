@@ -18,6 +18,9 @@
         <activity android:name=".KontactFormular" />
         <activity android:name=".Hilfe" />
         <activity android:name=".Profil" />
+        <activity android:name=".Tagesziel" />
+        <activity android:name=".Ubungen" />
+        <activity android:name=".Tagebuch" />
         <activity android:name=".Startseite" />
         <activity android:name=".MainActivity">
             <intent-filter>

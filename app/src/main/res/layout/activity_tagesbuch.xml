@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include layout="@layout/toolbar_3" />
+    android:layout_height="match_parent"
+    tools:context=".Tagebuch">
 
     <include
-        android:id="@+id/include12"
-        layout="@layout/toolbar_bottom" />
+        android:id="@+id/include6"
+        layout="@layout/toolbar_3"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include6" />
 
     <LinearLayout
-        android:layout_width="405dp"
-        android:layout_height="623dp"
+        android:id="@+id/linearLayout9"
+        android:layout_width="383dp"
+        android:layout_height="593dp"
         android:layout_marginTop="3dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include12">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.157">
 
         <TextView
             android:id="@+id/textView97"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Heute"
             android:textSize="24sp"

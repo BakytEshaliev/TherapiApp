@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Wiki">
 
     <include layout="@layout/toolbar_3" />
 
@@ -15,14 +16,14 @@
         android:id="@+id/textView73"
         android:layout_width="335dp"
         android:layout_height="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:text="Thema wählen"
         android:textAlignment="viewStart"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -31,28 +32,6 @@
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
 
-    <SearchView
-        android:layout_width="41dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView73"
-        tools:layout_editor_absoluteX="41dp">
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
-
-        <View
-            android:id="@+id/divider11"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="?android:attr/listDivider" />
-    </SearchView>
-
     <LinearLayout
         android:layout_width="337dp"
         android:layout_height="211dp"
@@ -60,24 +39,14 @@
         android:baselineAligned="true"
         android:divider="@color/black"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="235dp">
-
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="?android:attr/listDivider" />
+        app:layout_constraintBottom_toTopOf="@+id/textView85"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <TextView
             android:id="@+id/textView80"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Thema 1"
             android:textSize="20sp" />
@@ -145,17 +114,52 @@
         android:id="@+id/textView85"
         android:layout_width="335dp"
         android:layout_height="93dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="48dp"
         android:text="Quellen und weitere Websites für die Information stehen."
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="590dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="288dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="170dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="361dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView73">
+
+        <SearchView
+            android:layout_width="41dp"
+            android:layout_height="34dp">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+        </SearchView>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
