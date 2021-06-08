@@ -6,83 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".ChatBot">
 
-    <include layout="@layout/toolbar_3" />
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_3" />
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_bottom" />
 
-    <LinearLayout
-        android:id="@+id/chatMessages"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/back"
-            android:elevation="1.5dp"
-            android:padding="10dp"
-            android:text="Hallo! Ich bin dein Persönlicher Chatbot. Hier können Hinweise bzgl. der Benutzung folgen und inwiefern der Bot auf Nachrichten der Nutzer*innen reagiert." />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="196dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/back"
-            android:elevation="1.5dp"
-            android:padding="10dp"
-            android:text="Bitte erzähle mir hier, wofür du die App nutzen mõchtest!" />
-
-        <TextView
-            android:id="@+id/textView50"
-            android:layout_width="239dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/back"
-            android:elevation="1.5dp"
-            android:padding="10dp"
-            android:text="Der Chatbot könnte fragen, ob der Nutzer den Depressionstest mit ihm Durchführen möchte, oder aber lieber über seinen Tag reden möchte." />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/inputMessage"
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:background="@drawable/back_message_input"
+        android:elevation="1.5dp"
+        android:ems="10"
+        android:hint="Bitte gib hier deine Nachricht ein..."
+        android:inputType="textPersonName"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatMessages"
-        app:layout_constraintVertical_bias="1.0">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            style="@style/Widget.AppCompat.AutoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Bitte gib hier deine Nachricht ein."
-            android:inputType="textPersonName"
-            android:padding="5dp" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/messagesRecyclerView"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

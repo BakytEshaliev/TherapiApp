@@ -6,11 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.therapiapp.chat_bot.ChatListAdapter;
+import com.example.therapiapp.chat_bot.Message;
 
 public class ChatBot extends BaseActivity {
 
-    public static boolean chatBotPrivacyPolicyAcceptedForSave = false;
-    public static boolean chatBotPrivacyPolicyAcceptedForUse = false;
+    public static boolean chatBotPrivacyPolicyAcceptedForSave = true;
+    public static boolean chatBotPrivacyPolicyAcceptedForUse = true;
+
+    private ChatListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +27,27 @@ public class ChatBot extends BaseActivity {
 
         if (!ChatBot.chatBotPrivacyPolicyAcceptedForSave) askForDataSavePermission();
         if (!ChatBot.chatBotPrivacyPolicyAcceptedForUse) askForDataUsePermission();
+
+        Message[] messages = new Message[] {
+                new Message(false, "Hallo! Ich bin dein Persönlicher Chatbot. Hier können Hinweise bzgl. der Benutzung folgen und inwiefern der Bot auf Nachrichten der Nutzer*innen reagiert."),
+                new Message(false, "Bitte erzähle mir hier, wofür du die App nutzen mõchtest!"),
+                new Message(false, "Der Chatbot könnte fragen, ob der Nutzer den Depressionstest mit ihm Durchführen möchte, oder aber lieber über seinen Tag reden möchte."),
+                new Message(true, "Hi! Okay."),
+        };
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.messagesRecyclerView);
+        adapter = new ChatListAdapter(messages);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        adapter.notifyDataSetChanged();
+//    }
 
     private void askForDataSavePermission() {
         DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
