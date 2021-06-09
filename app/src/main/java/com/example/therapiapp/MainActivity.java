@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(this, Startseite.class);
                 this.startActivity(intent);
             }
-        }else Toast.makeText(this,"There is no user with this password or email!",Toast.LENGTH_SHORT).show();
+        }else Toast.makeText(this,"Es gibt keinen Benutzer mit diesem Passwort oder E-Mail!",Toast.LENGTH_SHORT).show();
     }
 
     private boolean verifyUser(){

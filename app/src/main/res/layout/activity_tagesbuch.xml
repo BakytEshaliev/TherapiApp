@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".Tagebuch">
 
@@ -17,107 +17,116 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar_bottom"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+        android:layout_width="402dp"
+        android:layout_height="53dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include6" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="383dp"
-        android:layout_height="593dp"
-        android:layout_marginTop="3dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:layout_width="336dp"
+        android:layout_height="583dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.157">
-
-        <TextView
-            android:id="@+id/textView97"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Heute"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/spinner5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:entries="@array/data4" />
-
-        <EditText
-            android:id="@+id/editTextTextMultiLine3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="So fühlte ich mich heute..\nHier Geschehnisse von heute .." />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:layout_weight="1"
-                android:text="Gemütszustandübersicht" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Speichen" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView100"
+            android:id="@+id/linearLayout9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Kalenderübersicht"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <Spinner
-                android:id="@+id/spinner6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:entries="@array/data3" />
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView101"
-                android:layout_width="153dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:text="(oder Jahresübersicht)" />
+                android:id="@+id/textView97"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heute"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/data4" />
+
+            <EditText
+                android:id="@+id/tagesbuchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="So fühlte ich mich heute..\nHier Geschehnisse von heute .."
+                android:inputType="textMultiLine" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:onClick="showAll"
+                    android:text="Alle Einträge" />
+
+                <Button
+                    android:id="@+id/button26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="handleSave"
+                    android:text="Speichen" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kalenderübersicht"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/data3" />
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="121dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="(oder Jahresübersicht)" />
+
+            </LinearLayout>
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="296dp"
+                android:layout_height="277dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" />
 
         </LinearLayout>
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,40 @@
 package com.example.therapiapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.therapiapp.model.DiaryEntry;
+import com.example.therapiapp.util.DButil;
+
+import java.util.Date;
 
 public class Tagebuch extends BaseActivity{
+    private EditText tagesbuchEditText;
+    private DButil db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tagesbuch);
         initToolbar();
+
+        db = DButil.getInstance();
+        tagesbuchEditText = findViewById(R.id.tagesbuchEditText);
+    }
+    public void handleSave(View view){
+        String tagesbuchNote = tagesbuchEditText.getText().toString();
+        if (!tagesbuchNote.isEmpty()){
+            db.addToDiary(new DiaryEntry(new Date(),tagesbuchNote));
+            Toast.makeText(this,"Sie haben einen Eintrag in Ihrem Tagebuch hinzugefügt.",Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this,"Sie haben nichts in Ihr Tagebuch geschrieben.",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void showAll(View view) {
+        Intent intent = new Intent(this,TagesbuchList.class);
+        startActivity(intent);
     }
 }

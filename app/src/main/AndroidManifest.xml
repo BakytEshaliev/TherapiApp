@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapiApp">
-        <activity android:name=".ProfileBearbeiten"></activity>
+        <activity android:name=".TagesbuchList"></activity>
+        <activity android:name=".ProfileBearbeiten" />
         <activity android:name=".AnmeldingErfolgreich" />
         <activity android:name=".Registrierung2" />
         <activity android:name=".Datenschutz" />
@@ -20,14 +21,11 @@
         <activity android:name=".ChatBot" />
         <activity android:name=".KontactFormular" />
         <activity android:name=".Hilfe" />
-        <activity android:name=".Profil">
-
-        </activity>
+        <activity android:name=".Profil"></activity>
         <activity android:name=".Tagesziel" />
         <activity android:name=".Ubungen" />
         <activity android:name=".Tagebuch" />
-        <activity android:name=".Startseite" />
-<!--        hier -->
+        <activity android:name=".Startseite" /> <!-- hier -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
