@@ -31,8 +31,8 @@
             android:id="@+id/textView30"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_marginBottom="32dp"
             android:text="Hilfe"
             android:textSize="24sp"
@@ -42,20 +42,20 @@
             android:id="@+id/spinnerKontakt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/spinner_border"
             android:elevation="1.5dp"
-            android:tooltipText="Rückmeldungsgrund"
-            android:scrollbarStyle="outsideInset" />
+            android:scrollbarStyle="outsideInset"
+            android:tooltipText="Rückmeldungsgrund" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/edit_text_border"
             android:elevation="1.5dp"
@@ -78,17 +78,18 @@
                 android:layout_weight="1"
                 android:onClick="abbrechen"
                 android:text="Abbrechen"
-                app:backgroundTint="@color/white"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                app:backgroundTint="@color/white" />
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="sendFeedback"
                 android:text="Abschicken"
-                app:backgroundTint="@color/white"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                app:backgroundTint="@color/white" />
         </LinearLayout>
 
     </LinearLayout>

@@ -41,8 +41,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         RecyclerView.LayoutParams params = (RecyclerView.LayoutParams) holder.layout.getLayoutParams();
 
-        if (message.isFloatRight()) params.setMargins(margin,5,5,0);
-        else params.setMargins(5,5, margin,0);
+        if (message.isFloatRight()) params.setMargins(margin,5,8,0);
+        else params.setMargins(5,8, margin,0);
 
         holder.layout.setLayoutParams(params);
     }
@@ -64,7 +64,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         public ViewHolder(View itemView) {
             super(itemView);
             this.text = (TextView) itemView.findViewById(R.id.text);
-            layout = (RelativeLayout) itemView;//.findViewById(R.id.wrapperLayout);
+            layout = (RelativeLayout) itemView;
         }
     }
 }
