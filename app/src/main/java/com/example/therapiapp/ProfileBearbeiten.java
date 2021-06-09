@@ -27,7 +27,7 @@ public class ProfileBearbeiten extends AppCompatActivity {
         dButil = DButil.getInstance();
         user = (User) getIntent().getSerializableExtra("user");
 
-        Log.i("Info",user.toString());
+        Log.i("----Info",user.toString());
 
 
         email = findViewById(R.id.emailEditText);
@@ -48,7 +48,8 @@ public class ProfileBearbeiten extends AppCompatActivity {
             User updatedUser = new User(nameUser, emailUser, passwordUser, Language.valueOf(languageUser));
             Intent intent = new Intent();
             intent.putExtra("updatedUser",updatedUser);
-            setResult(1,intent);
+            setResult(RESULT_OK,intent);
+
             finish();
         }
     }

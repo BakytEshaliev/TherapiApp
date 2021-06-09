@@ -70,7 +70,9 @@ public class Profil extends BaseActivity {
         if (requestCode == 0){
             if (resultCode == RESULT_OK) {
                 User updatedUser = (User) data.getExtras().getSerializable("updatedUser");
-                Log.i("Info",updatedUser.toString());
+                dButil.setUser(updatedUser);
+                setUserInfo();
+                Log.i("------UpdatedUser",updatedUser.toString());
             }
         }
     }
