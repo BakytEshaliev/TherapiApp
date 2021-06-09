@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/toolbar_icon_background"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/toolbar1_textview"
+            app:layout_constraintEnd_toStartOf="@+id/toolbar_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
@@ -40,7 +40,7 @@
             app:srcCompat="@mipmap/ic_refresh_button_black" />
 
         <TextView
-            android:id="@+id/toolbar1_textview"
+            android:id="@+id/toolbar_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"

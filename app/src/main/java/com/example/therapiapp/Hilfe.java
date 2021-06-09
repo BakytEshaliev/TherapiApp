@@ -11,7 +11,7 @@ public class Hilfe extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hilfe);
-        initToolbar();
+        initToolbar("Hilfe");
     }
 
     public void toKontaktFormular(View v) {

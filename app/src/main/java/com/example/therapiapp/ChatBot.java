@@ -30,7 +30,7 @@ public class ChatBot extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_bot);
-        initToolbar();
+        initToolbar("Chatbot");
 
         if (!ChatBot.chatBotPrivacyPolicyAcceptedForSave) askForDataSavePermission();
         if (!ChatBot.chatBotPrivacyPolicyAcceptedForUse) askForDataUsePermission();

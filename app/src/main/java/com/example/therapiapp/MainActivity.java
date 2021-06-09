@@ -23,7 +23,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anmeldung_1);
-        initToolbar();
+        initToolbar("Wilkommen!");
         email = findViewById(R.id.mainEmailEditText);
         email.setText("test@gmail.com");
         password = findViewById(R.id.mainPasswordEditText);

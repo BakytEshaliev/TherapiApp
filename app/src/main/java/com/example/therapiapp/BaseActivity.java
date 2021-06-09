@@ -22,6 +22,14 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
     }
 
     protected void initToolbar() {
+        configureBottomToolbar("TherapieApp");
+    }
+
+    protected void initToolbar(String toolbarTitle) {
+        configureBottomToolbar(toolbarTitle);
+    }
+
+    private void configureBottomToolbar(String title) {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,6 +48,9 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
             popup.setOnMenuItemClickListener(this);
             popup.show();
         });
+
+        TextView titleTextView = (TextView) findViewById(R.id.toolbar_title);
+        titleTextView.setText(title);
     }
 
     @Override

@@ -15,7 +15,7 @@ public class KontactFormular extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kontact_formular);
-        initToolbar();
+        initToolbar("Feedback");
 
         String[] arraySpinner = new String[] {
                 "Feedback", "Problem", "Fehler"
