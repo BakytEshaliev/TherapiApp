@@ -29,7 +29,7 @@ public class Startseite extends BaseActivity {
     }
 
     public void toUbungen(View v) {
-        Intent intent = new Intent(this, Ubungen.class);
+        Intent intent = new Intent(this, Activities.class);
         this.startActivity(intent);;
     }
 

@@ -1,8 +1,12 @@
 package com.example.therapiapp.util;
 
+import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.model.DiaryEntry;
 import com.example.therapiapp.model.Language;
 import com.example.therapiapp.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,8 +18,13 @@ public class DButil {
     private List<DiaryEntry> diary;
 
     private User user;
+    private List<Activity> openActivities;
+    private List<Activity> closeActivities;
 
     private DButil() {
+        openActivities = new ArrayList<>();
+        closeActivities = new ArrayList<>();
+        addExampleActivities();
         diary = new ArrayList<>();
 
         diary.add(new DiaryEntry(new Date(2014,2,1,12,23),"Something 1"));
@@ -39,6 +48,35 @@ public class DButil {
         if (instance == null) instance = new DButil();
         return instance;
     }
+
+    public void addExampleActivities(){
+        openActivities.add(new Activity("Activity1"));
+        openActivities.add(new Activity("Activity2"));
+        openActivities.add(new Activity("Activity3"));
+        openActivities.add(new Activity("Activity4"));
+        openActivities.add(new Activity("Activity5"));
+        openActivities.add(new Activity("Activity6"));
+        openActivities.add(new Activity("Activity7"));
+        openActivities.add(new Activity("Activity8"));
+        openActivities.add(new Activity("Activity9"));
+        openActivities.add(new Activity("Activity10"));
+        openActivities.add(new Activity("Activity11"));
+        openActivities.add(new Activity("Activity12"));
+        openActivities.add(new Activity("Activity13"));
+        openActivities.add(new Activity("Activity14"));
+    }
+
+    public void closeActivity(Activity activity){
+        closeActivities.add(activity);
+    }
+
+    public List<Activity> getOpenActivities(){
+        return openActivities;
+    }
+    public List<Activity> getCloseActivities() {
+        return closeActivities;
+    }
+
     public void addToDiary(DiaryEntry diaryEntry){
         diary.add(diaryEntry);
     }

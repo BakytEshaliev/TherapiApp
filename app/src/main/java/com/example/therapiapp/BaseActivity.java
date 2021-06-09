@@ -63,7 +63,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
                 this.startActivity(intent);;
                 return true;
             case R.id.ubungen:
-                intent = new Intent(this, Ubungen.class);
+                intent = new Intent(this, Activities.class);
                 this.startActivity(intent);;
                 return true;
             case R.id.wiki:

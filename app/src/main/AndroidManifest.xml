@@ -23,7 +23,7 @@
         <activity android:name=".Hilfe" />
         <activity android:name=".Profil"></activity>
         <activity android:name=".Tagesziel" />
-        <activity android:name=".Ubungen" />
+        <activity android:name=".Activities" />
         <activity android:name=".Tagebuch" />
         <activity android:name=".Startseite" /> <!-- hier -->
         <activity android:name=".MainActivity">
