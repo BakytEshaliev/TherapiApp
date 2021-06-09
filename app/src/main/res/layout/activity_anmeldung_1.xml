@@ -32,10 +32,10 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/mainEmailEditText" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/mainEmailEditText"
         android:layout_width="301dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"
@@ -61,7 +61,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/mainPasswordEditText" />
 
     <TextView
         android:id="@+id/textView5"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/mainPasswordEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="62dp"

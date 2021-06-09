@@ -46,9 +46,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="handleProfileBearbeiten"
                 android:text="Profil bearbeiten"
-                app:backgroundTint="@color/white"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                app:backgroundTint="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +67,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView36"
+                android:id="@+id/profileNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -89,7 +90,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView38"
+                android:id="@+id/profileEmailTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -112,7 +113,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView40"
+                android:id="@+id/profilePasswordTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -135,7 +136,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView42"
+                android:id="@+id/profileLanguageTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -148,18 +149,19 @@
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="40dp"
         android:layout_weight="1"
+        android:onClick="deleteAccount"
         android:text="Account löschen"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView42" />
+        app:layout_constraintTop_toTopOf="@+id/profileLanguageTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
