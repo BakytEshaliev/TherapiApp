@@ -20,6 +20,7 @@ public class DButil {
     private User user;
     private List<Activity> openActivities;
     private List<Activity> closeActivities;
+    private Activity dailyActivity;
 
     private DButil() {
         openActivities = new ArrayList<>();
@@ -56,14 +57,7 @@ public class DButil {
         openActivities.add(new Activity("Activity4"));
         openActivities.add(new Activity("Activity5"));
         openActivities.add(new Activity("Activity6"));
-        openActivities.add(new Activity("Activity7"));
-        openActivities.add(new Activity("Activity8"));
-        openActivities.add(new Activity("Activity9"));
-        openActivities.add(new Activity("Activity10"));
-        openActivities.add(new Activity("Activity11"));
-        openActivities.add(new Activity("Activity12"));
-        openActivities.add(new Activity("Activity13"));
-        openActivities.add(new Activity("Activity14"));
+        dailyActivity = new Activity("Tagesziel");
     }
 
     public void closeActivity(Activity activity){
@@ -83,5 +77,17 @@ public class DButil {
 
     public List<DiaryEntry> getDiary() {
         return diary;
+    }
+
+    public Activity getDailyActivity() {
+        return dailyActivity;
+    }
+
+    public void deleteDailyActivity() {
+        dailyActivity = null;
+    }
+
+    public void openActivity(Activity activity) {
+        openActivities.add(activity);
     }
 }
