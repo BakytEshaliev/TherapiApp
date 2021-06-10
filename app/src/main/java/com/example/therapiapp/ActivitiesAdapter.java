@@ -48,8 +48,6 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
                 }
             }
         }, 1000);
-        Toast.makeText(context,"Good job!",Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
