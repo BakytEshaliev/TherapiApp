@@ -7,6 +7,6 @@ public class Tagesziel extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tagesziel_1);
-        initToolbar();
+        initToolbar("Tagesziel");
     }
 }

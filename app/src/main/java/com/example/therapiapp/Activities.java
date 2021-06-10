@@ -12,7 +12,7 @@ public class Activities extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubungen_1_2);
-        initToolbar();
+        initToolbar("Übungen");
 
         recyclerView = findViewById(R.id.recycle);
         ActivitiesAdapter activitiesAdapter = new ActivitiesAdapter(this);

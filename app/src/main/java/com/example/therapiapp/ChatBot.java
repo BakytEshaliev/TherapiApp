@@ -1,10 +1,12 @@
 package com.example.therapiapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
@@ -128,4 +130,6 @@ public class ChatBot extends BaseActivity {
         builder.setTitle("Hinweis").setMessage(message).setPositiveButton("Ja", dialogClickListener)
                 .setNegativeButton("Nein", dialogClickListener).show();
     }
+
+
 }

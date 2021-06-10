@@ -18,7 +18,7 @@ public class Tagebuch extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tagesbuch);
-        initToolbar();
+        initToolbar("Tagebuch");
 
         db = DButil.getInstance();
         tagesbuchEditText = findViewById(R.id.tagesbuchEditText);
