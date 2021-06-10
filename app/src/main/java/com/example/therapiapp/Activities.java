@@ -1,8 +1,11 @@
 package com.example.therapiapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,6 +19,7 @@ public class Activities extends BaseActivity {
     private RecyclerView closedActivitiesRV;
     private CheckBox dailyActivityCB;
     private Activity dailyActivity;
+    private ImageView addButton;
     //protected CardView dailyActivityCV;
     private DButil db;
 
@@ -46,6 +50,12 @@ public class Activities extends BaseActivity {
         ClosedActivitiesAdapter closedActivitiesAdapter = new ClosedActivitiesAdapter(this);
         closedActivitiesRV.setAdapter(closedActivitiesAdapter);
         closedActivitiesRV.setLayoutManager(new LinearLayoutManager(this));
+
+        addButton = findViewById(R.id.addButton);
+        addButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SelectActivityType.class);
+            this.startActivity(intent);;
+        });
     }
 
     public void notifyClosedActivitiesRV(){
