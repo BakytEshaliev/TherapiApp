@@ -1,9 +1,12 @@
 package com.example.therapiapp.util;
 
+import com.example.therapiapp.Wiki;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.model.DiaryEntry;
 import com.example.therapiapp.model.Language;
 import com.example.therapiapp.model.User;
+import com.example.therapiapp.model.WikiModel;
+import com.example.therapiapp.model.enum_model.WikiType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,7 @@ public class DButil {
     private List<Activity> closeActivities;
     private List<Activity> activitiesAgainstStress;
     private List<Activity> activitiesAgainstDepression;
+    private List<WikiModel> allWiki;
     private Activity dailyActivity;
 
     private DButil() {
@@ -29,7 +33,9 @@ public class DButil {
         closeActivities = new ArrayList<>();
         activitiesAgainstStress = new ArrayList<>();
         activitiesAgainstDepression = new ArrayList<>();
+        allWiki = new ArrayList<>();
         addExampleActivities();
+        addExampleWiki();
 
         diary = new ArrayList<>();
 
@@ -81,6 +87,16 @@ public class DButil {
         dailyActivity = new Activity("Tagesziel");
     }
 
+    public void addExampleWiki(){
+        allWiki.add(new WikiModel("Stress", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.MAIN));
+        allWiki.add(new WikiModel("Stress SUB 1", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.SUB));
+        allWiki.add(new WikiModel("Stress SUB 2", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.SUB));
+        allWiki.add(new WikiModel("Stress SUB 3", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.SUB));
+        allWiki.add(new WikiModel("Depression", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.MAIN));
+        allWiki.add(new WikiModel("Depression SUB 1", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.SUB));
+        allWiki.add(new WikiModel("Depression SUB 2", "Probenbezeichnung", "Beispiel einer Quelle", WikiType.SUB));
+    }
+
     public void closeActivity(Activity activity){
         closeActivities.add(activity);
     }
@@ -122,5 +138,9 @@ public class DButil {
 
     public List<Activity> getActivitiesAgainstDepression() {
         return activitiesAgainstDepression;
+    }
+
+    public List<WikiModel> getAllWiki() {
+        return allWiki;
     }
 }
