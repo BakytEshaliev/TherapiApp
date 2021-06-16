@@ -146,7 +146,7 @@ public class ChatBot extends BaseActivity {
                 }
             }
         };
-        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass deine Daten auf einem Server gespeichert werden, damit der Chatbotdementsprechend auf deine Antworten reagieren kann? Diese Einstellung kann jederzeit unter deinen Einstellungen aktiviert oder deaktiviert werden.";
+        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass deine Daten auf einem Server gespeichert werden, damit der Chatbot dem entsprechend auf deine Antworten reagieren kann? Diese Einstellung kann jederzeit unter deinen Einstellungen aktiviert oder deaktiviert werden.";
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Hinweis").setMessage(message).setPositiveButton("Ja", dialogClickListener)
                 .setNegativeButton("Nein", dialogClickListener).show();
@@ -167,7 +167,7 @@ public class ChatBot extends BaseActivity {
                 }
             }
         };
-        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass der von dir angegebene Aurzt auf deine Daten zugreifen kann und diese zur Unterstutzung deiner Behandlung nutzen darf?";
+        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass der von dir angegebene Arzt auf deine Daten zugreifen kann und diese zur Unterstutzung deiner Behandlung nutzen darf?";
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Hinweis").setMessage(message).setPositiveButton("Ja", dialogClickListener)
                 .setNegativeButton("Nein", dialogClickListener).show();
