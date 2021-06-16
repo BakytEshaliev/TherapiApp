@@ -1,22 +1,27 @@
 package com.example.therapiapp;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.therapiapp.chat_bot.ChatListAdapter;
 import com.example.therapiapp.chat_bot.Message;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 public class ChatBot extends BaseActivity {
 
@@ -24,6 +29,8 @@ public class ChatBot extends BaseActivity {
     public static boolean chatBotPrivacyPolicyAcceptedForUse = false;
     public static ArrayList<Message> messages = new ArrayList<>();;
     public static boolean listFilled = false;
+
+    private static HashMap<String, String> QAMap;
 
     private RecyclerView recyclerView;
     private ChatListAdapter adapter;
@@ -45,6 +52,8 @@ public class ChatBot extends BaseActivity {
         }
         ChatBot.listFilled = true;
 
+        if (QAMap == null) fillQAMap();
+
         recyclerView = (RecyclerView) findViewById(R.id.messagesRecyclerView);
         adapter = new ChatListAdapter(ChatBot.messages);
         recyclerView.setHasFixedSize(true);
@@ -63,6 +72,8 @@ public class ChatBot extends BaseActivity {
             }
             return false;
         });
+
+        AndroidNetworking.initialize(getApplicationContext());
     }
 
     private void sendMessage() {
@@ -73,20 +84,51 @@ public class ChatBot extends BaseActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 adapter.addMessage(new Message(true, text));
-                getAnswer();
+                getAnswer(text);
                 recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
             }
         }, 1000);
     }
 
-    private void getAnswer() {
+    private void getAnswer(String question) {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                adapter.addMessage(new Message(false, "Ich verstehe Sie noch nicht, aber in der Zukunft werden Sie in der Lage sein, mit mir zu kommunizieren!"));
-                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                if (QAMap.containsKey(question)) {
+                    adapter.addMessage(new Message(false, QAMap.get(question)));
+                    recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                    return;
+                }
+                AndroidNetworking.get("https://uselessfacts.jsph.pl/random.json")
+//              .addPathParameter("id", "2")
+//              .addQueryParameter("q", "question")
+                        .build()
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                adapter.addMessage(new Message(false, "Interessante Fakt!"));
+                                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                Handler handler = new Handler();
+                                handler.postDelayed(new Runnable() {
+                                    public void run() {
+                                        try {
+                                            adapter.addMessage(new Message(false, response.getString("text")));
+                                        } catch (JSONException e) {
+                                            adapter.addMessage(new Message(false, "Es ist ein Fehler beim Server!"));
+                                            recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                        }
+                                        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                    }
+                                }, 1000);
+                            }
+                            @Override
+                            public void onError(ANError anError) {
+                                adapter.addMessage(new Message(false, "Tut mir leid, aber ich verstehe Sie nicht!"));
+                                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                            }
+                        });
             }
-        }, 3000);
+        }, 1000);
     }
 
     private void askForDataSavePermission() {
@@ -131,5 +173,8 @@ public class ChatBot extends BaseActivity {
                 .setNegativeButton("Nein", dialogClickListener).show();
     }
 
-
+    private void fillQAMap() {
+        QAMap = new HashMap<>();
+        QAMap.put("Hi", "Hallo");
+    }
 }
