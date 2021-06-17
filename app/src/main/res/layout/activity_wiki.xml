@@ -59,11 +59,12 @@
         </SearchView>
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/wikiSearchEditText"
             android:layout_width="301dp"
             android:layout_height="48dp"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:onClick="handleSearch" />
 
     </LinearLayout>
 
