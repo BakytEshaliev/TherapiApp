@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,35 +42,38 @@ public class NewActivitiesAdapter extends RecyclerView.Adapter<NewActivitiesAdap
         holder.bind(activities.get(position));
     }
 
-    public void openActivity(Activity activity) {
-        int pos = activities.indexOf(activity);
-        if (pos != -1) {
-            if (db.getDailyActivity() == null){
-                db.setDailyActivity(activity);
-            }
-            else {
-                db.openActivity(activity);
-            }
-            Intent intent = new Intent(context, Activities.class);
-            context.startActivity(intent);
-            context.finish();
-        }
+    public void openActivity(int pos) {
+        Activity activity = activities.get(pos);
+        Bundle b = new Bundle();
+        b.putString("id", activity.getId());
+        b.putString("type", "N");
+        Intent intent = new Intent(context, ActivityItem.class);
+        intent.putExtras(b);
+        context.startActivity(intent);
     }
 
-    public class NewActivitiesViewHolder extends RecyclerView.ViewHolder {
+    public class NewActivitiesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private CheckBox checkBox;
         private NewActivitiesAdapter adapter;
+        private TextView textView;
 
         public NewActivitiesViewHolder(NewActivitiesAdapter adapter, View itemView) {
             super(itemView);
             this.adapter = adapter;
             checkBox = itemView.findViewById(R.id.checkBox111);
+            textView = itemView.findViewById(R.id.textView733);
+            itemView.setOnClickListener(this);
         }
 
         void bind(Activity activity) {
-            checkBox.setText(activity.getName());
-            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> adapter.openActivity(activity));
+            textView.setText(activity.getName());
+            checkBox.setChecked(false);
+        }
+
+        @Override
+        public void onClick(View view) {
+            adapter.openActivity(getAdapterPosition());
         }
     }
 }

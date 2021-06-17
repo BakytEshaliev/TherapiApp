@@ -30,6 +30,8 @@
         <activity android:name=".NewActivities"/>
         <activity android:name=".SelectActivityType"/>
         <activity android:name=".WikiItem"/>
+        <activity android:name=".ActivityItem"/>
+        <activity android:name=".OpenActivityItem"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

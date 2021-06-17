@@ -3,48 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <include layout="@layout/toolbar_3" />
+    android:layout_height="match_parent"
+    tools:context=".ActivityItem">
 
     <include
-        android:id="@+id/include14"
-        layout="@layout/toolbar_bottom" />
+        android:id="@+id/include3"
+        layout="@layout/toolbar_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_bottom"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="60dp" />
 
     <TextView
-        android:id="@+id/textView73"
-        android:layout_width="335dp"
-        android:layout_height="47dp"
+        android:id="@+id/activityName"
+        android:layout_width="347dp"
+        android:layout_height="48dp"
         android:text="Übung 1"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="@+id/checkBox13"
-        app:layout_constraintTop_toBottomOf="@+id/include14" />
-
-    <TextView
-        android:id="@+id/textView75"
-        android:layout_width="338dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="27dp"
-        android:text="Vorherige Ergebnisse"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
-
-    <CheckBox
-        android:id="@+id/checkBox13"
-        android:layout_width="30dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="4dp"
-        android:textSize="96sp"
-        app:layout_constraintStart_toStartOf="@+id/textView76"
-        app:layout_constraintTop_toTopOf="@+id/textView73" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
         android:id="@+id/textView76"
@@ -53,32 +40,37 @@
         android:layout_marginTop="16dp"
         android:text="Erklärung"
         android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine2"
-        app:layout_constraintTop_toBottomOf="@+id/textView73" />
+        app:layout_constraintStart_toStartOf="@+id/activityName"
+        app:layout_constraintTop_toBottomOf="@+id/activityName" />
 
-    <EditText
-        android:id="@+id/editTextTextMultiLine2"
-        android:layout_width="336dp"
-        android:layout_height="103dp"
-        android:layout_marginStart="40dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/activityDiscription"
+        android:layout_width="347dp"
+        android:layout_height="94dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/activityName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView76"
         app:layout_constraintTop_toBottomOf="@+id/textView76" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="341dp"
-        android:layout_height="91dp"
+        android:layout_width="352dp"
+        android:layout_height="213dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="386dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activityDiscription"
+        app:layout_constraintStart_toStartOf="@+id/activityDiscription"
+        app:layout_constraintTop_toBottomOf="@+id/activityDiscription">
+
+        <TextView
+            android:id="@+id/textView75"
+            android:layout_width="338dp"
+            android:layout_height="48dp"
+            android:text="Vorherige Ergebnisse"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/textView77"
@@ -104,7 +96,8 @@
         android:layout_width="168dp"
         android:layout_height="58dp"
         android:text="Übung starten"
-        tools:layout_editor_absoluteX="121dp"
-        tools:layout_editor_absoluteY="599dp" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

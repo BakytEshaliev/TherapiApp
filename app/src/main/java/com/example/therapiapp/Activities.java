@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
@@ -31,14 +32,17 @@ public class Activities extends BaseActivity {
 
         db = DButil.getInstance();
         dailyActivity = db.getDailyActivity();
+
+        TextView dailyActivityTV = findViewById(R.id.textView128);
         dailyActivityCB = findViewById(R.id.daily_activity);
 
         if (dailyActivity != null) {
-            dailyActivityCB.setText(dailyActivity.getName());
-            dailyActivityCB.setOnCheckedChangeListener((buttonView, isChecked) -> closeDailyActivity());
+            dailyActivityTV.setText(dailyActivity.getName());
+            dailyActivityTV.setOnClickListener(v -> openDailyActivity());
         }
         else {
             dailyActivityCB.setVisibility(View.INVISIBLE);
+            dailyActivityTV.setVisibility(View.INVISIBLE);
         }
 
         recyclerView = findViewById(R.id.recycle);
@@ -66,10 +70,12 @@ public class Activities extends BaseActivity {
         recyclerView.getAdapter().notifyDataSetChanged();
     }
 
-    public void closeDailyActivity(){
-        db.closeActivity(dailyActivity);
-        notifyClosedActivitiesRV();
-        db.deleteDailyActivity();
-        dailyActivityCB.setVisibility(View.INVISIBLE);
+    public void openDailyActivity(){
+        Bundle b = new Bundle();
+        b.putString("id", dailyActivity.getId());
+        b.putString("type", "Q");
+        Intent intent = new Intent(this, OpenActivityItem.class);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 }

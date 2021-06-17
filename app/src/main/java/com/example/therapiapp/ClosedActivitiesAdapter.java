@@ -1,6 +1,8 @@
 package com.example.therapiapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,37 +47,38 @@ public class ClosedActivitiesAdapter extends RecyclerView.Adapter<ClosedActiviti
         holder.bind(activities.get(position));
     }
 
-    public void openActivity(Activity activity){
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                int pos = activities.indexOf(activity);
-                if (pos != -1) {
-                    db.openActivity(activity);
-                    activities.remove(activity);
-                    context.notifyOpenActivitiesRV();
-                    notifyDataSetChanged();
-                }
-            }
-        }, 1000);
-
+    public void openClosedActivity(int pos){
+        Activity activity = activities.get(pos);
+        Bundle b = new Bundle();
+        b.putString("id", activity.getId());
+        b.putString("type", "Q");
+        Intent intent = new Intent(context, ActivityItem.class);
+        intent.putExtras(b);
+        context.startActivity(intent);
     }
 
-    public static class ClosedActivitiesViewHolder extends RecyclerView.ViewHolder {
+    public static class ClosedActivitiesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private CheckBox checkBox;
         private ClosedActivitiesAdapter adapter;
+        private TextView textView;
 
         public ClosedActivitiesViewHolder(ClosedActivitiesAdapter adapter, View itemView) {
             super(itemView);
             this.adapter = adapter;
             checkBox = itemView.findViewById(R.id.checkBox111);
+            textView = itemView.findViewById(R.id.textView733);
+            itemView.setOnClickListener(this);
         }
 
         void bind(Activity activity) {
-            checkBox.setText(activity.getName());
+            textView.setText(activity.getName());
             checkBox.setChecked(true);
-            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> adapter.openActivity(activity));
+        }
+
+        @Override
+        public void onClick(View view) {
+            adapter.openClosedActivity(getAdapterPosition());
         }
     }
 }

@@ -13,7 +13,7 @@
         layout="@layout/toolbar_bottom" />
 
     <TextView
-        android:id="@+id/textView73"
+        android:id="@+id/activityName"
         android:layout_width="335dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
@@ -37,7 +37,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView73">
+        app:layout_constraintTop_toBottomOf="@+id/activityName">
 
         <SearchView
             android:layout_width="41dp"
