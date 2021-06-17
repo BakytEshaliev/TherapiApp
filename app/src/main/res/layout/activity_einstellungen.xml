@@ -167,7 +167,7 @@
                 android:id="@+id/textView79"
                 android:layout_width="210dp"
                 android:layout_height="99dp"
-                android:text="Wenn aktiviert wird bei Bestätigung der Notfallkontaktseite noch 10s in denen keine Handlung folgt der ausgewählte Kontakt alamiert" />
+                android:text="Nach der Aktivierung startet ein Notfallthreshold sobald die Notfalltaste aktiviert wird. Nachdem dieser abläuft, wird der ausgewählte Notfallkontakt automatisch alarmiert." />
 
             <Spinner
                 android:id="@+id/spinner3"

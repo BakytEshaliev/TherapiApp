@@ -7,7 +7,12 @@
     <string name="app_name">TherapiApp</string>
     <string-array name="data">
         <item>Gesichterkennung</item>
-        <item>Notfallkontakt</item>
+        <item>Fingerabdrucksensor</item>
+        <item>Passwort</item>
+        <item>Irisscan</item>
+        <item>Gestenmuster</item>
+        <item>PIN</item>
+
     </string-array>
     <string-array name="data2">
         <item>Notfallkontakt</item>
@@ -19,7 +24,7 @@
     </string-array>
     <string-array name="data4">
         <item>Monatsübersicht</item>
-        <item>Notfallkontakt</item>
+        <item>Jahresübersicht</item>
     </string-array>
     <string-array name="data5">
         <item>Durchschnittlicher Gemütszustand</item>

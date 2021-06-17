@@ -24,7 +24,7 @@
             android:id="@+id/textView67"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Hier wurde ein kurzer Text zur Einführung der folgenden Daten stehen."
+            android:text="Reden Sie mit jemanden über Ihre Gedanken und Gefühle! "
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,16 +35,23 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="20dp"
-            android:text="Reden sie mit jemandem über Ihre Gedanken und Gefhle!"
+            android:text="British Armed Forces Link (Germany)"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView68" />
 
         <TextView
+            android:id="@+id/textView127"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tel.:  0800 181 0771" />
+
+        <TextView
             android:id="@+id/textView98"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
+            android:layout_height="35dp"
             android:layout_marginTop="20dp"
             android:text="International Helpline Berlin"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -57,15 +64,35 @@
             app:layout_constraintVertical_bias="0.676" />
 
         <TextView
+            android:id="@+id/textView124"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tel.: 030 - 44 01 06 07  (Englischer Service)" />
+
+        <TextView
+            android:id="@+id/textView125"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tel.: 030 - 44 0106 06  (Russischer Service)" />
+
+        <TextView
             android:id="@+id/textView99"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="29dp"
-            android:text="Tel: 12345678 (Englischer Service) usw."
+            android:text="Telefonseelsorge Deutschland"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+        <TextView
+            android:id="@+id/textView126"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tel.: 0800 1110 111 " />
+
     </LinearLayout>
 
 
