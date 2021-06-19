@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -53,6 +55,12 @@ public class DiaryAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.content = convertView.findViewById(R.id.diaryContent);
             viewHolder.date = convertView.findViewById(R.id.diaryDate);
+            viewHolder.button = convertView.findViewById(R.id.buttonDeleteEintrag);
+            viewHolder.button.setOnClickListener((v)->{
+                diaryNotes.remove(position);
+                notifyDataSetChanged();
+                if (diaryNotes.size() == 0) Toast.makeText(v.getContext(), "Es gibt keine Einträge in Ihrem Tagebuch!",Toast.LENGTH_LONG).show();
+            });
             convertView.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -69,5 +77,6 @@ public class DiaryAdapter extends BaseAdapter {
     static class ViewHolder{
         TextView date;
         TextView content ;
+        Button button;
     }
 }
