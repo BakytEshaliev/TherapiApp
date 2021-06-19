@@ -78,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
-            android:text="Beschreibung wie man sich bzgl. des Ergebnisse fühlt, ob man glücklich ist oder traurig, dass man es vielleicht nicht erreicht hat. Eventuell genauere Beschreibung zu der Bewerbung des Tagesziels." />
+            android:text="Beschreibe bitte hier, was du aufgrund deines erreichten Ergebnisses fühlst. Bist du glücklich und zufrieden damit? Oder fühlst du dich niedergeschlagen, da du es nicht erreichen konntest?  Wenn du möchtest, kannst du hier auch näher das Tagesziel bewerten, damit du später deine allgemeine Bewertung nachvollziehen kannst. " />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -97,6 +97,11 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
         onBackPressed();
     }
 
+    public void handleHerzClick(View view){
+        Intent intent = new Intent(this,NotfallKontakte.class);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_bottom_items_menu, menu);
