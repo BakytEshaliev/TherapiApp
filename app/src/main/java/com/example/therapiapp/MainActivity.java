@@ -6,9 +6,11 @@ import android.sax.StartElementListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
@@ -23,7 +25,10 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anmeldung_1);
-        initToolbar("Wilkommen!");
+//        initToolbar("Wilkommen!");
+        ConstraintLayout constraintLayout = findViewById(R.id.loginToolBar);
+        TextView textView = constraintLayout.findViewById(R.id.toolbar_title);
+        textView.setText("Wilkommen!");
         email = findViewById(R.id.mainEmailEditText);
         email.setText("test@gmail.com");
         password = findViewById(R.id.mainPasswordEditText);
