@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +13,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.example.therapiapp.model.DiaryEntry;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class DiaryAdapter extends BaseAdapter {
@@ -45,6 +49,7 @@ public class DiaryAdapter extends BaseAdapter {
         return i;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -67,9 +72,9 @@ public class DiaryAdapter extends BaseAdapter {
         }
 
         DiaryEntry entry = diaryNotes.get(position);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy \tHH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy \tHH:mm:ss");
 
-        viewHolder.date.setText(dateFormat.format(entry.getDate()));
+        viewHolder.date.setText(entry.getDate().format(formatter));
         viewHolder.content.setText(entry.getContent());
         return convertView;
     }

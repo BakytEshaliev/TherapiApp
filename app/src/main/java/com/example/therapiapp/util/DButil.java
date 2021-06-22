@@ -1,5 +1,9 @@
 package com.example.therapiapp.util;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import com.example.therapiapp.Wiki;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.model.DiaryEntry;
@@ -8,6 +12,7 @@ import com.example.therapiapp.model.User;
 import com.example.therapiapp.model.WikiModel;
 import com.example.therapiapp.model.enum_model.WikiType;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +33,7 @@ public class DButil {
     private List<WikiModel> allWiki;
     private Activity dailyActivity;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private DButil() {
         openActivities = new ArrayList<>();
         closeActivities = new ArrayList<>();
@@ -39,9 +45,9 @@ public class DButil {
 
         diary = new ArrayList<>();
 
-        diary.add(new DiaryEntry(new Date(2014,2,1,12,23),"Something 1"));
-        diary.add(new DiaryEntry(new Date(2014,2,10,23,41),"Something 2"));
-        diary.add(new DiaryEntry(new Date(2014,2,20,10,13),"Something 3"));
+        diary.add(new DiaryEntry(LocalDateTime.of(2014,2,12,12,24,35),"Something 1"));
+        diary.add(new DiaryEntry(LocalDateTime.of(2014,2,10,23,41,33),"Something 2"));
+        diary.add(new DiaryEntry(LocalDateTime.of(2014,2,20,10,13,23),"Something 3"));
 
     }
 
@@ -56,6 +62,7 @@ public class DButil {
         this.user = user;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public static DButil getInstance() {
         if (instance == null) instance = new DButil();
         return instance;
