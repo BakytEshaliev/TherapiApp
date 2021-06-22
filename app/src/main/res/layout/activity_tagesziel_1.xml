@@ -36,29 +36,27 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView93"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Titel des Ziels"
-            android:textStyle="bold" />
+            android:layout_height="61dp"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="Eine kurze Beschreibung des Ziels\n" />
+            <CheckBox
+                android:id="@+id/daily_activityCBinTagesziel"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:enabled="false" />
 
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="Ergenbis festhalten" />
+            <TextView
+                android:id="@+id/textViewDAinTagesziel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="137dp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView95"
