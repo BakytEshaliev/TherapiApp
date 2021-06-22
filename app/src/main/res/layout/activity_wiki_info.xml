@@ -13,39 +13,45 @@
         layout="@layout/toolbar_bottom"
         tools:layout_editor_absoluteY="60dp" />
 
-    <LinearLayout
-        android:layout_width="316dp"
-        android:layout_height="549dp"
-        android:layout_marginTop="1dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="334dp"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <TextView
-            android:id="@+id/wiki_name_in_info"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="TextView"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/wiki_descriprion"
-            android:layout_width="match_parent"
-            android:layout_height="398dp"
-            android:text="TextView" />
+            <TextView
+                android:id="@+id/wiki_name_in_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/wiki_source"
-            android:layout_width="match_parent"
-            android:layout_height="109dp"
-            android:layout_marginEnd="0dp"
-            android:text="TextView"
-            android:textColor="#2196F3"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/wiki_descriprion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/wiki_source"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:layout_marginEnd="0dp"
+                android:text="TextView"
+                android:textColor="#2196F3"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
