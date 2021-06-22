@@ -17,6 +17,7 @@ import java.net.URLEncoder;
 public class Wiki extends BaseActivity {
 
     private EditText searchEditText;
+    private WikiAdapter wikiAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,15 +26,13 @@ public class Wiki extends BaseActivity {
         initToolbar("Wiki");
         searchEditText = findViewById(R.id.wikiSearchEditText);
         RecyclerView recyclerView = findViewById(R.id.wiki_recycler);
-        WikiAdapter wikiAdapter = new WikiAdapter(this);
+        wikiAdapter = new WikiAdapter(this);
         recyclerView.setAdapter(wikiAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void handleSearch(View view) {
         String query = searchEditText.getText().toString();
-        Uri uri = Uri.parse("https://en.wikipedia.org/wiki/"+query);
-        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-        startActivity(intent);
+        wikiAdapter.setSearchStr(query);
     }
 }

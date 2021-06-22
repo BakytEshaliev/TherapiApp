@@ -17,10 +17,12 @@ import com.example.therapiapp.model.WikiModel;
 import com.example.therapiapp.model.enum_model.WikiType;
 import com.example.therapiapp.util.DButil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder> {
     private List<WikiModel> allWiki;
+    private String searchStr;
     private Wiki context;
     private static DButil db;
 
@@ -55,6 +57,20 @@ public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder
         Intent intent = new Intent(context, WikiItem.class);
         intent.putExtras(b);
         context.startActivity(intent);
+    }
+
+    public void setSearchStr(String searchStr){
+        allWiki = db.getAllWiki();
+        if (!searchStr.trim().equals("")) {
+            List<WikiModel> searchWiki = new ArrayList<>();
+            for (WikiModel wikiModel : allWiki) {
+                if (wikiModel.getName().trim().toLowerCase().contains(searchStr.trim().toLowerCase())
+                        || wikiModel.getDescription().trim().toLowerCase().contains(searchStr.trim().toLowerCase()))
+                    searchWiki.add(wikiModel);
+            }
+            allWiki = searchWiki;
+        }
+        notifyDataSetChanged();
     }
 
 
