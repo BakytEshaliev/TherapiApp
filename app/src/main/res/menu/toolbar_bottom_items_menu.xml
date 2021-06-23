@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/toolbar_top"
+        android:id="@+id/profileButtonToolBar"
         android:orderInCategory="100"
         android:title="Profil"
         app:showAsAction="ifRoom"
         android:titleCondensed="profil"/>
     <item
-        android:id="@+id/hilfe"
+        android:id="@+id/hilfeButtonToolBar"
         android:orderInCategory="200"
         android:title="Hilfe"
         app:showAsAction="ifRoom"

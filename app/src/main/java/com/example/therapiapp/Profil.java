@@ -1,19 +1,24 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
 
 import java.io.Serializable;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class Profil extends BaseActivity {
     DButil dButil = DButil.getInstance();
 
@@ -22,7 +27,16 @@ public class Profil extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
         initToolbar("Profil");
+
         setUserInfo();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuItem item = menu.findItem(R.id.profileButtonToolBar);
+        item.setVisible(false);
+        return true;
     }
 
     @Override

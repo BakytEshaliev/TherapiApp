@@ -7,7 +7,7 @@
     tools:context=".Profil">
 
     <include
-        android:id="@+id/toolbar_top"
+        android:id="@+id/profileButtonToolBar"
         layout="@layout/toolbar_3" />
 
     <include
