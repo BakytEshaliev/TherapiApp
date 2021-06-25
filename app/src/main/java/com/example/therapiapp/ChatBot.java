@@ -3,6 +3,7 @@ package com.example.therapiapp;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.EditText;
 
@@ -19,6 +20,7 @@ import com.example.therapiapp.chat_bot.Message;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
@@ -38,6 +40,7 @@ public class ChatBot extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG,"create ChatBot");
         setContentView(R.layout.activity_chat_bot);
         initToolbar("Chatbot");
 

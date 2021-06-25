@@ -22,6 +22,7 @@ public class Wiki extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG,"create Wiki");
         setContentView(R.layout.activity_wiki);
         initToolbar("Wiki");
         searchEditText = findViewById(R.id.wikiSearchEditText);

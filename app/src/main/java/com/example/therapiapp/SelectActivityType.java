@@ -2,11 +2,13 @@ package com.example.therapiapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 public class SelectActivityType extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG,"create SelectActivityType");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubungen_type_select);
 
@@ -29,5 +31,11 @@ public class SelectActivityType extends BaseActivity{
         });
 
         initToolbar("Übungen");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"destroy SelectActivityType");
     }
 }

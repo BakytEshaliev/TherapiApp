@@ -16,6 +16,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 public abstract class BaseActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
+    public static final String TAG = "State";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,34 +61,42 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
         switch (item.getItemId()) {
             case R.id.startseite:
                 intent = new Intent(this, Startseite.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             case R.id.chat_bot:
                 intent = new Intent(this, ChatBot.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             case R.id.tagebuch:
                 intent = new Intent(this, Tagebuch.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);;
                 return true;
             case R.id.tagesziel:
                 intent = new Intent(this, Tagesziel.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);;
                 return true;
             case R.id.ubungen:
                 intent = new Intent(this, Activities.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);;
                 return true;
             case R.id.wiki:
                 intent = new Intent(this, Wiki.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);;
                 return true;
             case R.id.kontakte:
                 intent = new Intent(this, Kontakte.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             case R.id.einstellungen:
                 intent = new Intent(this, Einstellungen.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             default:
@@ -115,10 +125,12 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
         switch (selectedMenuIdString) {
             case "hilfe":
                 Intent intent = new Intent(this, Hilfe.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             case "profil":
                 intent = new Intent(this, Profil.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 this.startActivity(intent);
                 return true;
             default:

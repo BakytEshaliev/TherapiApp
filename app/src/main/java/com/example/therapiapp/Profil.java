@@ -24,11 +24,18 @@ public class Profil extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(BaseActivity.TAG,"create Profile");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
         initToolbar("Profil");
 
         setUserInfo();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(BaseActivity.TAG,"destroy Profile");
     }
 
     @Override

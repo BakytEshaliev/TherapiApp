@@ -1,13 +1,16 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,9 +27,11 @@ public class Activities extends BaseActivity {
     //protected CardView dailyActivityCV;
     private DButil db;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG,"create Ubungen");
         setContentView(R.layout.activity_ubungen_1_2);
         initToolbar("Übungen");
 
@@ -60,6 +65,12 @@ public class Activities extends BaseActivity {
             Intent intent = new Intent(this, SelectActivityType.class);
             this.startActivity(intent);;
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"destroy Ubungen");
     }
 
     public void notifyClosedActivitiesRV(){

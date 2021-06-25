@@ -1,7 +1,10 @@
 package com.example.therapiapp;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,8 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewActivities extends BaseActivity{
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG,"create Gegendepression");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubungen_2);
         initToolbar("Übungen");
@@ -37,5 +42,11 @@ public class NewActivities extends BaseActivity{
         NewActivitiesAdapter newActivitiesAdapter = new NewActivitiesAdapter(this, activities);
         recyclerView.setAdapter(newActivitiesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"destroy Gegendepression");
     }
 }

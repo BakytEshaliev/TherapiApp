@@ -1,11 +1,14 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,8 +19,10 @@ public class ActivityItem extends BaseActivity {
     private DButil db;
     private Activity activity;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG,"create ActivityItem");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubungen_3);
         initToolbar("Übungen");
@@ -49,10 +54,17 @@ public class ActivityItem extends BaseActivity {
         description.setText(descriptionStr);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"destroy ActivityItem");
+    }
+
     private void openActivity() {
         Activity newActivity = new Activity(activity.getName(), activity.getDescription());
         db.openActivity(newActivity);
         Intent intent = new Intent(this, Activities.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
     }

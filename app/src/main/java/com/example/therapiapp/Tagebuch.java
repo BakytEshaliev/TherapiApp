@@ -3,6 +3,7 @@ package com.example.therapiapp;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class Tagebuch extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG,"create Tagebuch");
         setContentView(R.layout.activity_tagesbuch);
         initToolbar("Tagebuch");
 

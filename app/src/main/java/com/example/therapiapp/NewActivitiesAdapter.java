@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.therapiapp.model.Activity;
@@ -21,6 +23,7 @@ public class NewActivitiesAdapter extends RecyclerView.Adapter<NewActivitiesAdap
     private NewActivities context;
     private static DButil db;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public NewActivitiesAdapter(NewActivities context, List<Activity> activities){
         this.context = context;
         db = DButil.getInstance();
