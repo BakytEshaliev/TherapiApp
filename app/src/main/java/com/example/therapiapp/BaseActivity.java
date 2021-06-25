@@ -109,6 +109,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
 
     public void handleHerzClick(View view){
         Intent intent = new Intent(this,NotfallKontakte.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 
