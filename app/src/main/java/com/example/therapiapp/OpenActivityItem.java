@@ -1,11 +1,14 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
 
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.util.DButil;
@@ -16,6 +19,7 @@ public class OpenActivityItem extends BaseActivity {
     private EditText content;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,14 +53,15 @@ public class OpenActivityItem extends BaseActivity {
         db.closeActivity(activity);
         db.removeOpenActivity(activity);
         Intent intent = new Intent(this, Activities.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        finish();
+        this.finish();
     }
 
     private void abrechenBtn(){
         db.removeOpenActivity(activity);
-        Intent intent = new Intent(this, Activities.class);
-        startActivity(intent);
+//        Intent intent = new Intent(this, Activities.class);
+//        startActivity(intent);
         finish();
     }
 

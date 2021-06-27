@@ -48,7 +48,9 @@ public class Tagesziel extends BaseActivity {
         b.putString("id", dailyActivity.getId());
         b.putString("type", "Q");
         Intent intent = new Intent(this, OpenActivityItem.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtras(b);
         startActivity(intent);
+        finish();
     }
 }

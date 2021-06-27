@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.sax.StartElementListener;
 import android.util.Log;
@@ -9,17 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class MainActivity extends BaseActivity {
     DButil dButil = DButil.getInstance();
     private EditText password;
     private EditText email;
-    private static boolean anmeldungErfolgreich = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +40,9 @@ public class MainActivity extends BaseActivity {
 
     public void toStartseite(View v) {
         if (verifyUser()) {
-            if (!anmeldungErfolgreich){
-                Intent intent = new Intent(this, AnmeldingErfolgreich.class);
-                this.startActivity(intent);
-            }else {
-                Intent intent = new Intent(this, Startseite.class);
-                this.startActivity(intent);
-            }
+            Intent intent = new Intent(this, AnmeldingErfolgreich.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            this.startActivity(intent);
         }else Toast.makeText(this,"Es gibt keinen Benutzer mit diesem Passwort oder E-Mail!",Toast.LENGTH_SHORT).show();
     }
 
@@ -61,7 +60,4 @@ public class MainActivity extends BaseActivity {
         this.startActivity(intent);
     }
 
-    public static void setAnmeldungErfolgreich(boolean anmeldungErfolgreich) {
-        MainActivity.anmeldungErfolgreich = anmeldungErfolgreich;
-    }
 }

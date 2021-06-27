@@ -59,10 +59,13 @@ public class Activities extends BaseActivity {
         ClosedActivitiesAdapter closedActivitiesAdapter = new ClosedActivitiesAdapter(this);
         closedActivitiesRV.setAdapter(closedActivitiesAdapter);
         closedActivitiesRV.setLayoutManager(new LinearLayoutManager(this));
+        notifyClosedActivitiesRV();
+        notifyOpenActivitiesRV();
 
         addButton = findViewById(R.id.addButton);
         addButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, SelectActivityType.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             this.startActivity(intent);;
         });
     }
