@@ -23,9 +23,9 @@ public class Registrierung2 extends BaseActivity {
 
     public void handleBestatigen(View view) {
         Editable text = editText.getText();
-        if (text.toString().equals("12345"))
-            Toast.makeText(view.getContext(), "Sie haben den Code bestätigt", Toast.LENGTH_SHORT).show();
-        else
+        if (text.toString().equals("12345")){
+            Toast.makeText(view.getContext(), "Sie haben den Code bestätigt", Toast.LENGTH_SHORT).show(); text.clear();
+        } else
             Toast.makeText(view.getContext(), "Sie haben den falschen Code eingegeben", Toast.LENGTH_SHORT).show();
 
     }
