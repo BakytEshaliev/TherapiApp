@@ -1,11 +1,15 @@
 package com.example.therapiapp;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,14 +20,19 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.therapiapp.chat_bot.ChatListAdapter;
 import com.example.therapiapp.chat_bot.Message;
+import com.example.therapiapp.chat_bot.PhqTest;
+import com.example.therapiapp.chat_bot.QA;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.time.LocalDateTime;
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 public class ChatBot extends BaseActivity {
 
@@ -32,7 +41,9 @@ public class ChatBot extends BaseActivity {
     public static ArrayList<Message> messages = new ArrayList<>();;
     public static boolean listFilled = false;
 
-    private static HashMap<String, String> QAMap;
+    private List<QA> qas = new ArrayList<>();
+    private boolean askForTest = false;
+    private PhqTest phqTest = null;
 
     private RecyclerView recyclerView;
     private ChatListAdapter adapter;
@@ -55,8 +66,6 @@ public class ChatBot extends BaseActivity {
         }
         ChatBot.listFilled = true;
 
-        if (QAMap == null) fillQAMap();
-
         recyclerView = (RecyclerView) findViewById(R.id.messagesRecyclerView);
         adapter = new ChatListAdapter(ChatBot.messages);
         recyclerView.setHasFixedSize(true);
@@ -77,6 +86,37 @@ public class ChatBot extends BaseActivity {
         });
 
         AndroidNetworking.initialize(getApplicationContext());
+        readJsonFromFile();
+    }
+
+    private void readJsonFromFile() {
+        String jsonString;
+        try {
+            InputStream is = getApplicationContext().getAssets().open("qa.json");
+
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            jsonString = new String(buffer, "UTF-8");
+
+            Gson gson = new Gson();
+            Type listQAType = new TypeToken<List<QA>>(){}.getType();
+
+            this.qas = gson.fromJson(jsonString, listQAType);
+        } catch (IOException e) {
+            e.printStackTrace();
+            this.qas = new ArrayList<>();
+        }
+    }
+
+    private String getAnswerForQuestionFromFile(String question) {
+        if (qas.size() == 0) return "";
+        for (QA qa:qas) {
+            if (question.equalsIgnoreCase(qa.getQ())) return qa.getA();
+        }
+        return "";
     }
 
     private void sendMessage() {
@@ -93,43 +133,115 @@ public class ChatBot extends BaseActivity {
         }, 1000);
     }
 
+    private void addPhq9PrepAnswers() {
+        String[] answers = new String[] {
+                "überhaupt nicht",
+                "an einzelnen Tagen",
+                "an mehr als der Hälfte der Tage",
+                "beinahe jeden Tag"
+        };
+        LinearLayout ll = findViewById(R.id.prepAnsView);
+        for (String a:answers) {
+            Button b = new Button(this);
+            b.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+            b.setText(a);
+            b.setBackgroundColor(Color.WHITE);
+            b.setOnClickListener(v -> {
+                System.out.println("clicked: " + a);
+                EditText input = (EditText) findViewById(R.id.inputMessage);
+                input.setText(a);
+                sendMessage();
+                ll.removeAllViews();
+            });
+            ll.addView(b);
+        }
+        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+    }
+
     private void getAnswer(String question) {
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             public void run() {
-                if (QAMap.containsKey(question)) {
-                    adapter.addMessage(new Message(false, QAMap.get(question)));
+                EditText input = (EditText) findViewById(R.id.inputMessage);
+                if (phqTest != null) {
+                    String phqQuestion = phqTest.getAnswerFor(question);
+                    if (phqQuestion.equals("exit")) {
+                        input.setEnabled(true);
+                        adapter.addMessage(new Message(false, phqTest.getResult()));
+                        phqTest = null;
+                        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                        return;
+                    }
+                    input.setEnabled(false);
+                    addPhq9PrepAnswers();
+                    adapter.addMessage(new Message(false, phqQuestion));
                     recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
                     return;
                 }
-                AndroidNetworking.get("https://uselessfacts.jsph.pl/random.json")
-//              .addPathParameter("id", "2")
-//              .addQueryParameter("q", "question")
-                        .build()
-                        .getAsJSONObject(new JSONObjectRequestListener() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                adapter.addMessage(new Message(false, "Interessante Fakt!"));
-                                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
-                                Handler handler = new Handler();
-                                handler.postDelayed(new Runnable() {
-                                    public void run() {
-                                        try {
-                                            adapter.addMessage(new Message(false, response.getString("text")));
-                                        } catch (JSONException e) {
-                                            adapter.addMessage(new Message(false, "Es ist ein Fehler beim Server!"));
+                input.setEnabled(true);
+
+                if (askForTest) {
+                    if (question.equals("Ja") || question.equals("ja")) {
+                        phqTest = new PhqTest();
+                        getAnswer("PHQ-9");
+                    } else if (question.equals("Nein") || question.equals("nein")) {
+                        phqTest = new PhqTest();
+                        adapter.addMessage(new Message(false, "Okay"));
+                        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                    }
+                    askForTest = false;
+                    return;
+                }
+
+                if (question.equals("PHQ-9") || question.equals("phq-9") || question.equals("phq9") ||
+                        question.equals("PHQ9") || question.equals("PHQ") || question.equals("phq") ||
+                        question.equals("test") || question.equals("PHQ 9") || question.equals("phq 9")) {
+                    askForTest = true;
+                    adapter.addMessage(new Message(false, "Möchtest du den PHQ 9 Test mit mir durchführen? Bitte beachte, dass dieser Test keine fachliche Diagnose ersetzen kann und soll. Suche dafür bitte einen echten Psychologen auf."));
+                    recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                    return;
+                }
+
+                if (question.equals("Fact")) {
+                    AndroidNetworking.get("https://uselessfacts.jsph.pl/random.json")
+                            .build()
+                            .getAsJSONObject(new JSONObjectRequestListener() {
+                                @Override
+                                public void onResponse(JSONObject response) {
+                                    adapter.addMessage(new Message(false, "Interessante Fakt!"));
+                                    recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                    Handler handler = new Handler();
+                                    handler.postDelayed(new Runnable() {
+                                        public void run() {
+                                            try {
+                                                adapter.addMessage(new Message(false, response.getString("text")));
+                                            } catch (JSONException e) {
+                                                adapter.addMessage(new Message(false, "Es ist ein Fehler beim Server!"));
+                                                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                            }
                                             recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
                                         }
-                                        recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
-                                    }
-                                }, 1000);
-                            }
-                            @Override
-                            public void onError(ANError anError) {
-                                adapter.addMessage(new Message(false, "Tut mir leid, aber ich verstehe Sie nicht!"));
-                                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
-                            }
-                        });
+                                    }, 1000);
+                                }
+
+                                @Override
+                                public void onError(ANError anError) {
+                                    adapter.addMessage(new Message(false, "Tut mir leid, aber ich verstehe Sie nicht!"));
+                                    recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                }
+                            });
+                    return;
+                }
+
+                String a = getAnswerForQuestionFromFile(question);
+                if (!a.equals("")) {
+                    adapter.addMessage(new Message(false, a));
+                    recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
+                    return;
+                }
+
+                adapter.addMessage(new Message(false, "Leider verstehe ich Sie nicht."));
+                recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
             }
         }, 1000);
     }
@@ -174,10 +286,5 @@ public class ChatBot extends BaseActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Hinweis").setMessage(message).setPositiveButton("Ja", dialogClickListener)
                 .setNegativeButton("Nein", dialogClickListener).show();
-    }
-
-    private void fillQAMap() {
-        QAMap = new HashMap<>();
-        QAMap.put("Hi", "Hallo");
     }
 }
