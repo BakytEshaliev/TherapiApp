@@ -60,8 +60,9 @@ public class OpenActivityItem extends BaseActivity {
 
     private void abrechenBtn(){
         db.removeOpenActivity(activity);
-//        Intent intent = new Intent(this, Activities.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, Activities.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
         finish();
     }
 
