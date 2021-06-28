@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -16,7 +17,8 @@ public class Registrierung2 extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activiry_registrierung_2);
-        initToolbar();
+//        initToolbar();
+
         editText = findViewById(R.id.editTextNumber);
 
     }

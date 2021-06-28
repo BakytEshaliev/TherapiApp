@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Build;
@@ -16,7 +17,8 @@ public class RegisterActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_registrierung_1);
-        initToolbar();
+//        initToolbar();
+
     }
 
     public void toDatenschutz(View view){
