@@ -4,11 +4,27 @@
     "a": "Hello"
   },
   {
-    "q": "bekzhan",
-    "a": "Satarov"
-  },
-  {
     "q": "bye",
     "a": "Bye!"
+  },
+  {
+    "q": "Was sind Depressionen?",
+    "a": "Eine Depression ist eine schwere seelische Erkrankung, die in jedem Alter auftreten kann. Die Patienten fühlen sich sehr niedergeschlagen, verlieren ihre Interessen und sind erschöpft und antriebslos. Die Krankheit besteht über längere Zeit und bessert sich ohne Behandlung meist nicht von alleine."
+  },
+  {
+    "q": "Welche Symptome können auftreten?",
+    "a": "Schmerzen (z.B. unspezifische Kopf- oder Bauchschmerzen);\nständige Müdigkeit, Energiemangel;\nnachlassendes sexuelles Interesse;\nReizbarkeit, Angst;\nzunehmende Lustlosigkeit, Apathie;\nmissmutige Stimmungslage;\nSchlafstörungen;\nAppetitlosigkeit."
+  },
+  {
+    "q": "Wie häufig treten Depressionen auf?",
+    "a": "Depressionen sind in der Bevölkerung weit verbreitet. Epidemiologische Studien haben gezeigt, dass zumindest 15 % der Bevölkerung im Laufe ihres Lebens an einer Depression erkranken."
+  },
+  {
+    "q": "Wie geht man mit Depressionen um?",
+    "a": "Anzeichen von Depressionen sind unter anderem gedrückte Stimmung, Interessenverlust und Antriebsschwäche. Die wichtigsten Behandlungen sind Psychotherapie und Medikamente (Antidepressiva). Während und nach einer Schwangerschaft erleben viele Frauen ein Auf und Ab der Gefühle."
+  },
+  {
+    "q": "Was hilft einem glücklich zu werden?",
+    "a": "sich morgens im Bett fünf Dinge überlegen, für die man dankbar ist.\nsich abends bewusst machen, was man tagsüber gut gemacht hat.\nPositives aufschreiben und vielleicht sogar teilen - z.B. als Post-it an der Wand.\njeden Tag eine Minute lächeln.\njeden Tag jemandem ein Kompliment machen."
   }
 ]
