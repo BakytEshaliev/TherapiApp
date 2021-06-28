@@ -43,6 +43,7 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
         holder.bind(activities.get(position));
     }
 
+
     public void openActivity(int layoutPosition) {
         Activity activity = activities.get(layoutPosition);
         Bundle b = new Bundle();

@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="handleOk"
-            android:text="Ok" />
+            android:text="Bestätigen" />
 
         <Button
             android:id="@+id/button15"
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:onClick="handleBack"
-            android:text="Back" />
+            android:text="Zurück" />
     </LinearLayout>
 
 

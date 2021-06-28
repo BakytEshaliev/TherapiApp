@@ -11,13 +11,13 @@
 
     <TextView
         android:id="@+id/textView29"
-        android:layout_width="267dp"
-        android:layout_height="282dp"
+        android:layout_width="288dp"
+        android:layout_height="464dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="72dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        android:textSize="16sp"
+        android:text="Der Schutz deiner Daten und Privatsphäre ist uns sehr wichtig. Wir sind uns bewusst, dass Gesundheitsinformationen sehr sensibel sind und den maximalen Schutz benötigen. Deshalb erheben wir so wenige persönliche Daten wie möglich und sichern diese mit den höchsten technischen Standards. Wir wir beim Datenschutz genau vorgehen, das erklärt dir unsere nun folgende Datenschutzerklärung. Und kontaktiere uns gerne, wenn du sonst noch Fragen hast kannst du uns jederzeit eine E-Mail senden."
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

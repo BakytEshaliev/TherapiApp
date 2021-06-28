@@ -86,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:onClick="handleSave"
-                    android:text="Speichen" />
+                    android:text="Speichern" />
 
             </LinearLayout>
 
@@ -111,13 +111,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:entries="@array/data3" />
-
-                <TextView
-                    android:id="@+id/textView101"
-                    android:layout_width="121dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:text="(oder Jahresübersicht)" />
 
             </LinearLayout>
 

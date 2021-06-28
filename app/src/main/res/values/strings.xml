@@ -16,7 +16,6 @@
     </string-array>
     <string-array name="data2">
         <item>Notfallkontakt</item>
-        <item>Notfallkontakt</item>
     </string-array>
     <string-array name="data3">
         <item>Monatsübersicht</item>
@@ -24,12 +23,10 @@
 
     </string-array>
     <string-array name="data4">
-        <item>Monatsübersicht</item>
-        <item>Jahresübersicht</item>
+        <item>Durchschnittlicher Gemütszustand</item>
     </string-array>
     <string-array name="data5">
         <item>Durchschnittlicher Gemütszustand</item>
-        <item>Notfallkontakt</item>
     </string-array>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
