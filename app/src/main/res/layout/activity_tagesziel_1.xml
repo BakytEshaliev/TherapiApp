@@ -58,6 +58,19 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/addButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@mipmap/ic_add" />
+
         <TextView
             android:id="@+id/textView95"
             android:layout_width="match_parent"

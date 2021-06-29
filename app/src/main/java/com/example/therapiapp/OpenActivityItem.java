@@ -17,6 +17,7 @@ public class OpenActivityItem extends BaseActivity {
     private Activity activity;
     private DButil db;
     private EditText content;
+    private String from;
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -40,6 +41,7 @@ public class OpenActivityItem extends BaseActivity {
 
         Bundle b = getIntent().getExtras();
         String id = b.getString("id");
+        from = b.getString("from");
 
         activity = db.findOpenActivityById(id);
 
@@ -52,17 +54,39 @@ public class OpenActivityItem extends BaseActivity {
         activity.setContent(content.getText().toString());
         db.closeActivity(activity);
         db.removeOpenActivity(activity);
-        Intent intent = new Intent(this, Activities.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        this.finish();
+        switch (from) {
+            case "Z": {
+                Intent intent = new Intent(this, Tagesziel.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+            case "U": {
+                Intent intent = new Intent(this, Activities.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+        }
+        finish();
     }
 
     private void abrechenBtn(){
         db.removeOpenActivity(activity);
-        Intent intent = new Intent(this, Activities.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivity(intent);
+        switch (from) {
+            case "Z": {
+                Intent intent = new Intent(this, Tagesziel.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+            case "U": {
+                Intent intent = new Intent(this, Activities.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+        }
         finish();
     }
 

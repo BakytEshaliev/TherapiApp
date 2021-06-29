@@ -18,6 +18,7 @@ import com.example.therapiapp.util.DButil;
 public class ActivityItem extends BaseActivity {
     private DButil db;
     private Activity activity;
+    private String from;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -34,6 +35,7 @@ public class ActivityItem extends BaseActivity {
         Bundle b = getIntent().getExtras();
         String id = b.getString("id");
         String type = b.getString("type");
+        from = b.getString("from");
 
         button.setOnClickListener(v -> openActivity());
 
@@ -61,11 +63,24 @@ public class ActivityItem extends BaseActivity {
     }
 
     private void openActivity() {
-        Activity newActivity = new Activity(activity.getName(), activity.getDescription());
-        db.openActivity(newActivity);
-        Intent intent = new Intent(this, Activities.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        switch (from){
+            case "Z":{
+                Activity newActivity = new Activity(activity.getName(), activity.getDescription());
+                db.openActivity(newActivity);
+                Intent intent = new Intent(this, Tagesziel.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+            case "U":{
+                Activity newActivity = new Activity(activity.getName(), activity.getDescription());
+                db.openActivity(newActivity);
+                Intent intent = new Intent(this, Activities.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            }
+        }
         finish();
     }
 }

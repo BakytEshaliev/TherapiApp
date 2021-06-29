@@ -20,84 +20,91 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="60dp" />
 
-    <TextView
-        android:id="@+id/activityName"
-        android:layout_width="347dp"
-        android:layout_height="48dp"
-        android:text="Übung 1"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="358dp"
+        android:layout_height="513dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-    <TextView
-        android:id="@+id/textView76"
-        android:layout_width="81dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
-        android:text="Erklärung"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/activityName"
-        app:layout_constraintTop_toBottomOf="@+id/activityName" />
-
-    <TextView
-        android:id="@+id/activityDiscription"
-        android:layout_width="347dp"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/activityName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView76"
-        app:layout_constraintTop_toBottomOf="@+id/textView76" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="352dp"
-        android:layout_height="213dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/activityDiscription"
-        app:layout_constraintStart_toStartOf="@+id/activityDiscription"
-        app:layout_constraintTop_toBottomOf="@+id/activityDiscription">
-
-        <TextView
-            android:id="@+id/textView75"
-            android:layout_width="338dp"
-            android:layout_height="48dp"
-            android:text="Vorherige Ergebnisse"
-            android:textColor="#000000"
-            android:textSize="14sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/textView77"
+        <LinearLayout
+            android:id="@+id/linearLayout11"
             android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:text="Anzahl der Durchführungen: 2" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView78"
-            android:layout_width="match_parent"
-            android:layout_height="31dp"
-            android:text="Vorherige Bewerfung der Übung: gut" />
+            <TextView
+                android:id="@+id/activityName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Übung 1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView79"
-            android:layout_width="match_parent"
-            android:layout_height="84dp"
-            android:text="Übersicht der erreichten Ziele:" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="81dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="16dp"
+                android:text="Erklärung"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/activityDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="222dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView75"
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:text="Vorherige Ergebnisse"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textView77"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:text="Anzahl der Durchführungen: 2" />
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="match_parent"
+                    android:layout_height="31dp"
+                    android:text="Vorherige Bewerfung der Übung: gut" />
+
+                <TextView
+                    android:id="@+id/textView79"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:text="Übersicht der erreichten Ziele:" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/button19"
         android:layout_width="168dp"
         android:layout_height="58dp"
         android:text="Übung starten"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -64,9 +64,12 @@ public class Activities extends BaseActivity {
 
         addButton = findViewById(R.id.addButton);
         addButton.setOnClickListener(v -> {
+            Bundle b = new Bundle();
+            b.putString("from", "U");
             Intent intent = new Intent(this, SelectActivityType.class);
+            intent.putExtras(b);
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-            this.startActivity(intent);;
+            this.startActivity(intent);
         });
     }
 
@@ -88,6 +91,7 @@ public class Activities extends BaseActivity {
         Bundle b = new Bundle();
         b.putString("id", dailyActivity.getId());
         b.putString("type", "Q");
+        b.putString("from", "U");
         Intent intent = new Intent(this, OpenActivityItem.class);
         intent.putExtras(b);
         startActivity(intent);
