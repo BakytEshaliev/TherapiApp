@@ -50,13 +50,15 @@ public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder
 
     public void openWiki(int pos) {
         WikiModel wikiModel = allWiki.get(pos);
-        Bundle b = new Bundle();
-        b.putString("name",wikiModel.getName());
-        b.putString("description",wikiModel.getDescription());
-        b.putString("source", wikiModel.getSource());
-        Intent intent = new Intent(context, WikiItem.class);
-        intent.putExtras(b);
-        context.startActivity(intent);
+        if (wikiModel.getType() == WikiType.SUB) {
+            Bundle b = new Bundle();
+            b.putString("name", wikiModel.getName());
+            b.putString("description", wikiModel.getDescription());
+            b.putString("source", wikiModel.getSource());
+            Intent intent = new Intent(context, WikiItem.class);
+            intent.putExtras(b);
+            context.startActivity(intent);
+        }
     }
 
     public void setSearchStr(String searchStr){
