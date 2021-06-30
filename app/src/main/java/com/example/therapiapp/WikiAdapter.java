@@ -1,6 +1,7 @@
 package com.example.therapiapp;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.therapiapp.model.Activity;
@@ -26,6 +28,7 @@ public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder
     private Wiki context;
     private static DButil db;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public WikiAdapter(Wiki context){
         this.context = context;
         db = DButil.getInstance();
@@ -66,8 +69,9 @@ public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder
         if (!searchStr.trim().equals("")) {
             List<WikiModel> searchWiki = new ArrayList<>();
             for (WikiModel wikiModel : allWiki) {
-                if (wikiModel.getName().trim().toLowerCase().contains(searchStr.trim().toLowerCase())
+                if ((wikiModel.getName().trim().toLowerCase().contains(searchStr.trim().toLowerCase())
                         || wikiModel.getDescription().trim().toLowerCase().contains(searchStr.trim().toLowerCase()))
+                        && wikiModel.getType() == WikiType.SUB)
                     searchWiki.add(wikiModel);
             }
             allWiki = searchWiki;
