@@ -45,7 +45,7 @@
                 android:layout_weight="0.3"
                 android:text="Inhalt " />
 
-            <TextView
+            <EditText
                 android:id="@+id/diaryContent"
                 android:layout_width="337dp"
                 android:layout_height="93dp"
@@ -54,12 +54,28 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonDeleteEintrag"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="löschen" />
+            android:layout_weight="0.3"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonBearbeitenEintrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bearbeiten" />
+
+            <Button
+                android:id="@+id/buttonDeleteEintrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="20dp"
+                android:text="löschen" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,11 +61,17 @@ public class DiaryAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.content = convertView.findViewById(R.id.diaryContent);
             viewHolder.date = convertView.findViewById(R.id.diaryDate);
-            viewHolder.button = convertView.findViewById(R.id.buttonDeleteEintrag);
-            viewHolder.button.setOnClickListener((v)->{
+            viewHolder.buttonDel = convertView.findViewById(R.id.buttonDeleteEintrag);
+            viewHolder.buttonDel.setOnClickListener((v)->{
                 diaryNotes.remove(position);
                 notifyDataSetChanged();
                 if (diaryNotes.size() == 0) Toast.makeText(v.getContext(), "Es gibt keine Einträge in Ihrem Tagebuch!",Toast.LENGTH_LONG).show();
+            });
+            viewHolder.buttonBearb = convertView.findViewById(R.id.buttonBearbeitenEintrag);
+            viewHolder.buttonBearb.setOnClickListener((v)->{
+                DiaryEntry note = diaryNotes.get(position);
+                note.setContent(viewHolder.content.getText().toString());
+                Toast.makeText(v.getContext(),"Sie haben eine Änderung an dem Tagebucheintrag vorgenommen.",Toast.LENGTH_SHORT).show();
             });
             convertView.setTag(viewHolder);
         }else {
@@ -81,7 +88,8 @@ public class DiaryAdapter extends BaseAdapter {
 
     static class ViewHolder{
         TextView date;
-        TextView content ;
-        Button button;
+        EditText content ;
+        Button buttonDel;
+        Button buttonBearb;
     }
 }
