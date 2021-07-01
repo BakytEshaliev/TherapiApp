@@ -22,12 +22,14 @@ public class NewActivitiesAdapter extends RecyclerView.Adapter<NewActivitiesAdap
     private List<Activity> activities;
     private NewActivities context;
     private static DButil db;
+    private String from;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public NewActivitiesAdapter(NewActivities context, List<Activity> activities){
+    public NewActivitiesAdapter(NewActivities context, List<Activity> activities, String from){
         this.context = context;
         db = DButil.getInstance();
         this.activities = activities;
+        this.from = from;
     }
 
     @Override
@@ -50,6 +52,7 @@ public class NewActivitiesAdapter extends RecyclerView.Adapter<NewActivitiesAdap
         Bundle b = new Bundle();
         b.putString("id", activity.getId());
         b.putString("type", "N");
+        b.putString("from", from);
         Intent intent = new Intent(context, ActivityItem.class);
         intent.putExtras(b);
         context.startActivity(intent);

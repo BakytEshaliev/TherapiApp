@@ -6,17 +6,23 @@ import android.util.Log;
 import android.widget.Button;
 
 public class SelectActivityType extends BaseActivity{
+    private String from;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i(TAG,"create SelectActivityType");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubungen_type_select);
 
+        Bundle bundle = getIntent().getExtras();
+        from = bundle.getString("from");
+
+
         Button gegenStressBtn = findViewById(R.id.gegen_stress);
         gegenStressBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, NewActivities.class);
             Bundle b = new Bundle();
             b.putString("type", "Stress");
+            b.putString("from", from);
             intent.putExtras(b);
             this.startActivity(intent);;
         });
@@ -26,6 +32,7 @@ public class SelectActivityType extends BaseActivity{
             Intent intent = new Intent(this, NewActivities.class);
             Bundle b = new Bundle();
             b.putString("type", "Depression");
+            b.putString("from", from);
             intent.putExtras(b);
             this.startActivity(intent);;
         });

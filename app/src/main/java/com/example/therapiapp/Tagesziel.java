@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -32,9 +33,20 @@ public class Tagesziel extends BaseActivity {
         TextView dailyActivityTV = findViewById(R.id.textViewDAinTagesziel);
         dailyActivityCB = findViewById(R.id.daily_activityCBinTagesziel);
 
+        ImageView addButton = findViewById(R.id.addButton2);
+        addButton.setOnClickListener(v -> {
+            Bundle b = new Bundle();
+            b.putString("from", "Z");
+            Intent intent = new Intent(this, SelectActivityType.class);
+            intent.putExtras(b);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            this.startActivity(intent);
+        });;
+
         if (dailyActivity != null) {
             dailyActivityTV.setText(dailyActivity.getName());
             dailyActivityTV.setOnClickListener(v -> openDailyActivity());
+            addButton.setVisibility(View.INVISIBLE);
         }
         else {
             dailyActivityCB.setVisibility(View.INVISIBLE);
@@ -47,6 +59,7 @@ public class Tagesziel extends BaseActivity {
         Bundle b = new Bundle();
         b.putString("id", dailyActivity.getId());
         b.putString("type", "Q");
+        b.putString("from", "Z");
         Intent intent = new Intent(this, OpenActivityItem.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtras(b);

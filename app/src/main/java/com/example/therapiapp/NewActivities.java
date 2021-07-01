@@ -25,6 +25,7 @@ public class NewActivities extends BaseActivity{
 
         Bundle b = getIntent().getExtras();
         String type = b.getString("type");
+        String from = b.getString("from");
 
         DButil db = DButil.getInstance();
 
@@ -39,7 +40,7 @@ public class NewActivities extends BaseActivity{
         }
 
         RecyclerView recyclerView = findViewById(R.id.recycle_view_activities_with_type);
-        NewActivitiesAdapter newActivitiesAdapter = new NewActivitiesAdapter(this, activities);
+        NewActivitiesAdapter newActivitiesAdapter = new NewActivitiesAdapter(this, activities, from);
         recyclerView.setAdapter(newActivitiesAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
