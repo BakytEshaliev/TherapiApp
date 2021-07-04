@@ -61,7 +61,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
         switch (item.getItemId()) {
             case R.id.startseite:
                 intent = new Intent(this, Startseite.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 this.startActivity(intent);
                 return true;
             case R.id.chat_bot:

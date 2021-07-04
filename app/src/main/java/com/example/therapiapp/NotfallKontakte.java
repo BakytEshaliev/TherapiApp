@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,6 +32,16 @@ public class NotfallKontakte extends AppCompatActivity {
             finish();
             startActivity(getIntent());
         });
+
+        findViewById(R.id.nktextView1).setOnClickListener(this::makePhoneCall);
+        findViewById(R.id.nktextView2).setOnClickListener(this::makePhoneCall);
+        findViewById(R.id.nktextView3).setOnClickListener(this::makePhoneCall);
+        findViewById(R.id.nktextView4).setOnClickListener(this::makePhoneCall);
+    }
+    private void makePhoneCall(View view){
+        TextView tv = (TextView)view;
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+tv.getText().toString()));
+        startActivity(intent);
     }
 
     @Override
