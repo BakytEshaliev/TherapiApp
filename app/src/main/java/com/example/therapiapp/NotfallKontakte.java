@@ -25,14 +25,13 @@ public class NotfallKontakte extends AppCompatActivity {
         imageView.setVisibility(View.GONE);
         textView.setText("Notfall-Kontakte");
         ImageView img = findViewById(R.id.backImageView);
+        ImageView reloadImg = findViewById(R.id.reloadImageView);
         img.setOnClickListener((l)->finish());
+        reloadImg.setOnClickListener((l)->{
+            finish();
+            startActivity(getIntent());
+        });
     }
-//    public void handleHerzClick(View view){
-//        Intent intent = new Intent(this,NotfallKontakte.class);
-//        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-//        startActivity(intent);
-//    }
-
 
     @Override
     protected void onDestroy() {
