@@ -15,6 +15,12 @@ public class Startseite extends BaseActivity {
         initToolbar();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(TAG,"destroy Startseite");
+    }
+
     public void toChatBot(View v) {
         Intent intent = new Intent(this, ChatBot.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);

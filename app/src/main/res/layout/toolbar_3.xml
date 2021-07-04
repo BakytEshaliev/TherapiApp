@@ -44,10 +44,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/toolbar_icon_background"
+            android:onClick="handleReload"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_refresh_button_black"/>
+            app:srcCompat="@mipmap/ic_refresh_button_black" />
 
         <TextView
             android:id="@+id/toolbar_title"

@@ -42,14 +42,6 @@
             app:backgroundTint="@color/white" />
 
         <Button
-            android:id="@+id/button9"
-            android:layout_width="330dp"
-            android:layout_height="100dp"
-            android:onClick="toWiki"
-            android:text="Wiki"
-            app:backgroundTint="@color/white" />
-
-        <Button
             android:id="@+id/button4"
             android:layout_width="330dp"
             android:layout_height="100dp"
@@ -71,6 +63,14 @@
             android:layout_height="100dp"
             android:onClick="toUbungen"
             android:text="Übungen"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="330dp"
+            android:layout_height="100dp"
+            android:onClick="toWiki"
+            android:text="Wiki"
             app:backgroundTint="@color/white" />
 
     </LinearLayout>
