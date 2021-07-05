@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatDelegate;
+
 public class Startseite extends BaseActivity {
 
     @Override
@@ -13,6 +15,7 @@ public class Startseite extends BaseActivity {
         Log.i(TAG,"create Startseite");
         setContentView(R.layout.activity_startseite);
         initToolbar();
+//        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     @Override

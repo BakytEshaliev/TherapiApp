@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -32,6 +33,11 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//        getApplication().setTheme(AppCompatDelegate.MODE_NIGHT_NO);
+//        getApplication().setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
+
         setContentView(R.layout.activity_anmeldung_1);
 //        initToolbar("Wilkommen!");
 
