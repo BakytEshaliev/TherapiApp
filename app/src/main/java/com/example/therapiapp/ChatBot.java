@@ -60,7 +60,7 @@ public class ChatBot extends BaseActivity {
 
         if (!ChatBot.listFilled) {
             ChatBot.messages.add(new Message(false, "Hallo! Ich bin dein Persönlicher Chatbot. Hier können Hinweise bzgl. der Benutzung folgen und inwiefern der Bot auf Nachrichten der Nutzer*innen reagiert."));
-            ChatBot.messages.add(new Message(false, "Bitte erzähle mir hier, wofür du die App nutzen mõchtest!"));
+            ChatBot.messages.add(new Message(false, "Bitte erzähle mir hier, wofür du die App nutzen möchtest!"));
             ChatBot.messages.add(new Message(false, "Der Chatbot könnte fragen, ob der Nutzer den Depressionstest mit ihm Durchführen möchte, oder aber lieber über seinen Tag reden möchte."));
         }
         ChatBot.listFilled = true;
@@ -281,7 +281,7 @@ public class ChatBot extends BaseActivity {
                 }
             }
         };
-        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass der von dir angegebene Arzt auf deine Daten zugreifen kann und diese zur Unterstutzung deiner Behandlung nutzen darf?";
+        String message = "Bitte lies dir die folgende Hinweise genau durch und stimme dem nur zu, wenn du das möchtest. \n\nStimmst Du zu, dass der von dir angegebene Arzt auf deine Daten zugreifen kann und diese zur Unterstützung deiner Behandlung nutzen darf?";
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Hinweis").setMessage(message).setPositiveButton("Ja", dialogClickListener)
                 .setNegativeButton("Nein", dialogClickListener).show();

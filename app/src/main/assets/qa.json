@@ -26,5 +26,13 @@
   {
     "q": "Was hilft einem glücklich zu werden?",
     "a": "sich morgens im Bett fünf Dinge überlegen, für die man dankbar ist.\nsich abends bewusst machen, was man tagsüber gut gemacht hat.\nPositives aufschreiben und vielleicht sogar teilen - z.B. als Post-it an der Wand.\njeden Tag eine Minute lächeln.\njeden Tag jemandem ein Kompliment machen."
+  },
+  {
+    "q": "help",
+    "a": "Ich werde alle Fragen beantworten, die ich bearbeiten kann. Schreiben Sie einen \"test\", um den PHQ-9 Test zu bestandnen."
+  },
+  {
+    "q": "hilfe",
+    "a": "Ich werde alle Fragen beantworten, die ich bearbeiten kann. Schreiben Sie einen \"test\", um den PHQ-9 Test zu bestandnen."
   }
 ]
