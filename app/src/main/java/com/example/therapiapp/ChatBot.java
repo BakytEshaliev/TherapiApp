@@ -62,7 +62,6 @@ public class ChatBot extends BaseActivity {
             ChatBot.messages.add(new Message(false, "Hallo! Ich bin dein Persönlicher Chatbot. Hier können Hinweise bzgl. der Benutzung folgen und inwiefern der Bot auf Nachrichten der Nutzer*innen reagiert."));
             ChatBot.messages.add(new Message(false, "Bitte erzähle mir hier, wofür du die App nutzen mõchtest!"));
             ChatBot.messages.add(new Message(false, "Der Chatbot könnte fragen, ob der Nutzer den Depressionstest mit ihm Durchführen möchte, oder aber lieber über seinen Tag reden möchte."));
-            ChatBot.messages.add(new Message(true, "Hi! Okay."));
         }
         ChatBot.listFilled = true;
 
