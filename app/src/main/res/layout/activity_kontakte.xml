@@ -91,7 +91,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView52"
+                android:id="@+id/kontakte1TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="9"
@@ -131,11 +131,11 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView56"
+                android:id="@+id/kontakte2TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="16"
-                android:text="0123 456789123"
+                android:text="0123 456789124"
                 android:textAlignment="viewStart" />
         </LinearLayout>
 
@@ -161,11 +161,11 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView80"
+                android:id="@+id/kontakte3TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="16"
-                android:text="0123 456789123"
+                android:text="0123 456789125"
                 android:textAlignment="viewStart" />
         </LinearLayout>
 
@@ -191,11 +191,11 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView85"
+                android:id="@+id/kontakte4TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="16"
-                android:text="0123 456789123"
+                android:text="0123 456789126"
                 android:textAlignment="viewStart" />
         </LinearLayout>
 

@@ -12,7 +12,7 @@ public class AnmeldingErfolgreich extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anmeldunf_erfolgreich);
-        initToolbar();
+//        initToolbar();
     }
 
     public void handleWeiter(View view){

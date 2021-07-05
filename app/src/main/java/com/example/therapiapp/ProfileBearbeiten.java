@@ -13,7 +13,7 @@ import com.example.therapiapp.model.Language;
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
 
-public class ProfileBearbeiten extends AppCompatActivity {
+public class ProfileBearbeiten extends BaseActivity {
     private Spinner spinner;
     private EditText password;
     private EditText name;

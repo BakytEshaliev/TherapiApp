@@ -29,10 +29,11 @@
             app:srcCompat="@mipmap/ic_notfallkontakt" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/reloadImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/toolbar_icon_background"
+            android:onClick="handleReload"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -51,7 +52,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+            app:layout_constraintEnd_toStartOf="@+id/reloadImageView"
             app:layout_constraintStart_toEndOf="@+id/herzImageView"
             app:layout_constraintTop_toTopOf="parent" />
 
