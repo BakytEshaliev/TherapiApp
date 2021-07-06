@@ -55,7 +55,6 @@ public class MainActivity extends BaseActivity {
     public void toStartseite(View v) {
         if (verifyUser()) {
             Intent intent = new Intent(this, AnmeldingErfolgreich.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
             this.startActivity(intent);
         }else Toast.makeText(this,"Es gibt keinen Benutzer mit diesem Passwort oder E-Mail!",Toast.LENGTH_SHORT).show();
     }

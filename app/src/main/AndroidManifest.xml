@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.therapiapp">
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TherapiApp">
-        <activity android:name=".NotfallKontakte"></activity>
+        <activity android:name=".ZweckActivity"></activity>
+        <activity android:name=".NotfallKontakte" />
         <activity android:name=".TagesbuchList" />
         <activity android:name=".ProfileBearbeiten" />
         <activity android:name=".AnmeldingErfolgreich" />
@@ -27,11 +31,11 @@
         <activity android:name=".Activities" />
         <activity android:name=".Tagebuch" />
         <activity android:name=".Startseite" /> <!-- hier -->
-        <activity android:name=".NewActivities"/>
-        <activity android:name=".SelectActivityType"/>
-        <activity android:name=".WikiItem"/>
-        <activity android:name=".ActivityItem"/>
-        <activity android:name=".OpenActivityItem"/>
+        <activity android:name=".NewActivities" />
+        <activity android:name=".SelectActivityType" />
+        <activity android:name=".WikiItem" />
+        <activity android:name=".ActivityItem" />
+        <activity android:name=".OpenActivityItem" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +44,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

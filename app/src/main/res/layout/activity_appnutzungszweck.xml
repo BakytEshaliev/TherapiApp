@@ -45,13 +45,15 @@
         android:id="@+id/activityName"
         android:layout_width="340dp"
         android:layout_height="86dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="52dp"
         android:text="Wählen Sie einen oder mehrere Zweck(e) aus für die Sie die App nutzen möchten. Die Auswahl beeinflusst die Übungen, die Ihnen später empholen werden."
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include8" />
 
     <Button
@@ -60,6 +62,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="80dp"
+        android:onClick="weiterClick"
         android:text="Weiter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

@@ -6,19 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AnmeldingErfolgreich extends BaseActivity {
+public class ZweckActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anmeldunf_erfolgreich);
-//        initToolbar();
+        setContentView(R.layout.activity_appnutzungszweck);
     }
-
-    public void handleWeiter(View view){
-        Intent intent = new Intent(this, ZweckActivity.class);
-        this.startActivity(intent);
+    public void weiterClick(View view){
+        Intent intent = new Intent(this,Startseite.class);
+        startActivity(intent);
         finish();
     }
-
 }
