@@ -225,7 +225,7 @@ public class ChatBot extends BaseActivity {
 
                                 @Override
                                 public void onError(ANError anError) {
-                                    adapter.addMessage(new Message(false, "Tut mir leid, aber ich verstehe Sie nicht!"));
+                                    adapter.addMessage(new Message(false, "Tut mir leid, aber ich verstehe dich nicht!"));
                                     recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
                                 }
                             });
@@ -239,7 +239,7 @@ public class ChatBot extends BaseActivity {
                     return;
                 }
 
-                adapter.addMessage(new Message(false, "Leider verstehe ich Sie nicht."));
+                adapter.addMessage(new Message(false, "Leider verstehe ich dich nicht."));
                 recyclerView.smoothScrollToPosition(adapter.getItemCount() - 1);
             }
         }, 1000);
