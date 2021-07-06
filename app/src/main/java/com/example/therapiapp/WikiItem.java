@@ -1,6 +1,9 @@
 package com.example.therapiapp;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,5 +28,11 @@ public class WikiItem extends BaseActivity {
         name.setText(nameStr);
         description.setText(descriptionStr);
         source.setText(sourceStr);
+    }
+
+    public void openBrowser(View view) {
+        TextView tv = (TextView)view;
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(tv.getText().toString()));
+        startActivity(intent);
     }
 }
