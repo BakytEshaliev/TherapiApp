@@ -5,8 +5,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -18,6 +20,8 @@ public class Tagesziel extends BaseActivity {
     private DButil db;
     private CheckBox dailyActivityCB;
     private Activity dailyActivity;
+    private Spinner tagesZielSpinner;
+    private ImageView tzImageView;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -26,7 +30,27 @@ public class Tagesziel extends BaseActivity {
         Log.i(TAG,"create Tagesziel");
         setContentView(R.layout.activity_tagesziel_1);
         initToolbar("Tagesziel");
+        tagesZielSpinner = findViewById(R.id.tagesZielSpinner);
+        tzImageView = findViewById(R.id.tzImageView);
+        tagesZielSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedItem = parent.getItemAtPosition(position).toString();
+                switch (selectedItem){
+                    case "Jahresübersicht":
+                        tzImageView.setImageResource(R.drawable.t2);
+                        break;
+                    case "Monatsübersicht":
+                        tzImageView.setImageResource(R.drawable.t1);
+                        break;
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         db = DButil.getInstance();
         dailyActivity = db.getDailyActivity();
 
