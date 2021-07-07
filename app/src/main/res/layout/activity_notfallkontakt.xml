@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/textView67"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:text="Rede doch mit jemanden über deine Gedanken und Gefühle, wenn es dir gerade schlecht geht!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
