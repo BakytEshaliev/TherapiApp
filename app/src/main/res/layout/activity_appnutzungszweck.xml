@@ -12,28 +12,28 @@
         layout="@layout/toolbar_bottom" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/zweckCheckBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Qualität der sozialen Interaktion verbessern"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintStart_toStartOf="@+id/zweckCheckBox2"
+        app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox2" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/zweckCheckBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Depressionen behandeln"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintStart_toStartOf="@+id/zweckCheckBox1"
+        app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox1" />
 
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/zweckCheckBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -69,7 +69,7 @@
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox3"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

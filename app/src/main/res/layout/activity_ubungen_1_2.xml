@@ -81,8 +81,8 @@
                 android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/checkBox"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+                app:layout_constraintStart_toStartOf="@+id/zweckCheckBox1"
+                app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox1" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycle"

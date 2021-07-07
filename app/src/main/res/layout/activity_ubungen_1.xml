@@ -56,8 +56,8 @@
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            app:layout_constraintStart_toStartOf="@+id/zweckCheckBox1"
+            app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox1" />
 
         <CheckBox
             android:id="@+id/checkBox15"
@@ -76,8 +76,8 @@
             android:layout_marginTop="32dp"
             android:text="Übungsname"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/checkBox5"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+            app:layout_constraintStart_toStartOf="@+id/zweckCheckBox2"
+            app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox2" />
 
         <CheckBox
             android:id="@+id/checkBox17"
@@ -86,8 +86,8 @@
             android:layout_marginTop="40dp"
             android:text="Übungsname"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/checkBox4"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+            app:layout_constraintStart_toStartOf="@+id/zweckCheckBox3"
+            app:layout_constraintTop_toBottomOf="@+id/zweckCheckBox3" />
 
         <TextView
             android:id="@+id/textView104"
