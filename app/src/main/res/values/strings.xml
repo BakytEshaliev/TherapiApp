@@ -4,7 +4,7 @@
         <item>English</item>
     </string-array>
 
-    <string name="app_name">TherapiApp</string>
+    <string name="app_name">Genki 元気</string>
     <string-array name="data">
         <item>Gesichterkennung</item>
         <item>Fingerabdrucksensor</item>

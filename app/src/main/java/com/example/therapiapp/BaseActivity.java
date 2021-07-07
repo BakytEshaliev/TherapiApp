@@ -26,7 +26,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
     }
 
     protected void initToolbar() {
-        configureBottomToolbar("TherapieApp");
+        configureBottomToolbar("Genki 元気");
     }
 
     protected void initToolbar(String toolbarTitle) {
