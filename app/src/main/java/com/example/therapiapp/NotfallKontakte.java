@@ -36,7 +36,6 @@ public class NotfallKontakte extends AppCompatActivity {
         findViewById(R.id.nktextView1).setOnClickListener(this::makePhoneCall);
         findViewById(R.id.nktextView2).setOnClickListener(this::makePhoneCall);
         findViewById(R.id.nktextView3).setOnClickListener(this::makePhoneCall);
-        findViewById(R.id.nktextView4).setOnClickListener(this::makePhoneCall);
     }
     private void makePhoneCall(View view){
         TextView tv = (TextView)view;
