@@ -59,9 +59,11 @@ public class ChatBot extends BaseActivity {
         if (!ChatBot.chatBotPrivacyPolicyAcceptedForUse) askForDataUsePermission();
 
         if (!ChatBot.listFilled) {
-            ChatBot.messages.add(new Message(false, "Hallo! Ich bin dein Persönlicher Chatbot. Hier können Hinweise bzgl. der Benutzung folgen und inwiefern der Bot auf Nachrichten der Nutzer*innen reagiert."));
-            ChatBot.messages.add(new Message(false, "Bitte erzähle mir hier, wofür du die App nutzen möchtest!"));
-            ChatBot.messages.add(new Message(false, "Der Chatbot könnte fragen, ob der Nutzer den Depressionstest mit ihm Durchführen möchte, oder aber lieber über seinen Tag reden möchte."));
+            ChatBot.messages.add(new Message(false, "Hallo! Ich bin dein persönlicher Chatbot, Genki. Du kannst mit mir über deine Gefühle, Probleme oder auch Erfolge sprechen! Ich versuche dir so gut wie möglich zu helfen - jedoch bin ich noch in der Entwicklung und antworte daher nur eingeschränkt."));
+            ChatBot.messages.add(new Message(false, "Wenn du mit mir den PHQ-9 Test durchführen möchtest, dann zögere nicht mir dies zu schreiben!"));
+            ChatBot.messages.add(new Message(false, "Du kannst mich auch nach interessanten Fakten fragen, schreibe mir dafür einfach \"Facts\"."));
+            ChatBot.messages.add(new Message(false, "Ich freue mich schon darauf, dich besser kennenzulernen! \uD83D\uDE0A"));
+
         }
         ChatBot.listFilled = true;
 
