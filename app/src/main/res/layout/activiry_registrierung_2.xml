@@ -40,7 +40,7 @@
             android:layout_height="63dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="20dp"
-            android:text="Ihnen wurde ein Code per E-Mail gesendet. \nBitte geben Sie diesen hier ein um Ihre E-Mail zu bestätigen und den Account zu aktivieren"
+            android:text="Dir wurde ein Code per E-Mail gesendet. \nBitte gib diesen hier ein um deine E-Mail zu bestätigen und den Account zu aktivieren"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/textView62"
             app:layout_constraintEnd_toEndOf="@+id/textView60"
