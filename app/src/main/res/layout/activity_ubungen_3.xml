@@ -85,14 +85,20 @@
                     android:id="@+id/textView78"
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
-                    android:text="Vorherige Bewerfung der Übung: gut" />
+                    android:text="Vorherige Bewertung der Übung: gut" />
 
                 <TextView
                     android:id="@+id/textView79"
                     android:layout_width="match_parent"
-                    android:layout_height="84dp"
+                    android:layout_height="wrap_content"
                     android:text="Übersicht der erreichten Ziele:" />
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

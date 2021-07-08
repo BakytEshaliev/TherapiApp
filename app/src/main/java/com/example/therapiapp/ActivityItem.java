@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -30,7 +31,9 @@ public class ActivityItem extends BaseActivity {
 
         TextView name = findViewById(R.id.activityName);
         TextView description = findViewById(R.id.activityDiscription);
+        TextView result = findViewById(R.id.textView70);
         Button button = findViewById(R.id.button19);
+
 
         Bundle b = getIntent().getExtras();
         String id = b.getString("id");
@@ -45,12 +48,16 @@ public class ActivityItem extends BaseActivity {
         }
 
 
-
         db = DButil.getInstance();
         activity = db.findActivityById(id);
 
         String nameStr = activity.getName();
         String descriptionStr = activity.getDescription();
+
+        String resultStr = activity.getContent();
+
+        if (resultStr != null)
+            result.setText(resultStr);
 
         name.setText(nameStr);
         description.setText(descriptionStr);

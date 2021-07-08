@@ -99,7 +99,7 @@
             android:id="@+id/button20"
             android:layout_width="168dp"
             android:layout_height="58dp"
-            android:text="Weiter" />
+            android:text="Übung Abgeschlossen" />
 
     </LinearLayout>
 
