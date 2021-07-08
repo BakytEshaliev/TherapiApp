@@ -30,13 +30,13 @@ public class Registrierung2 extends BaseActivity {
             Intent intent = new Intent(this,MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
-            Toast.makeText(view.getContext(), "Sie haben den Code bestätigt", Toast.LENGTH_SHORT).show(); text.clear();
+            Toast.makeText(view.getContext(), "Du hast den Code bestätigt", Toast.LENGTH_SHORT).show(); text.clear();
         } else
-            Toast.makeText(view.getContext(), "Sie haben den falschen Code eingegeben", Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), "Du hast den falschen Code eingegeben", Toast.LENGTH_SHORT).show();
 
     }
     public void codeSenden(View view){
-        Toast.makeText(view.getContext(), "Überprüfen Sie Ihre E-Mail", Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), "Überprüfe deine E-Mail", Toast.LENGTH_SHORT).show();
     }
 
 }

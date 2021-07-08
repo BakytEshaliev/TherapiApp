@@ -49,7 +49,7 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="52dp"
-        android:text="Wählen Sie einen oder mehrere Zweck(e) aus für die Sie die App nutzen möchten. Die Auswahl beeinflusst die Übungen, die Ihnen später empfohlen werden."
+        android:text="Wähle einen oder mehrere Zweck(e) aus für die du die App nutzen möchten. Die Auswahl beeinflusst die Übungen, die dir später empfohlen werden."
         android:textColor="#000000"
         android:textSize="16sp"
         android:textStyle="normal"

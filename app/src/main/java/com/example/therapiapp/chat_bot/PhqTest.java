@@ -50,10 +50,10 @@ public class PhqTest {
             else if (answers[i].equals(c)) result += 2;
             else if (answers[i].equals(d)) result += 3;
         }
-        if (result >= 0 && result <= 4) return "Sie haben keine Depression (" + result + "/27)";
-        else if (result >= 5 && result <= 9) return "Ihr Depressionslevel: Mild (" + result + "/27)";
-        else if (result >= 10 && result <= 14) return "Ihr Depressionslevel: Moderate (" + result + "/27)";
-        else if (result >= 15 && result <= 19) return "Ihr Depressionslevel: Moderately Severe (" + result + "/27)";
-        else return "Ihr Depressionslevel: Severe (" + result + "/27)";
+        if (result >= 0 && result <= 4) return "Du hast keine Depression (" + result + "/27)";
+        else if (result >= 5 && result <= 9) return "Dein Depressionslevel: Mild (" + result + "/27)";
+        else if (result >= 10 && result <= 14) return "Dein Depressionslevel: Moderate (" + result + "/27)";
+        else if (result >= 15 && result <= 19) return "Dein Depressionslevel: Moderately Severe (" + result + "/27)";
+        else return "Dein Depressionslevel: Severe (" + result + "/27)";
     }
 }

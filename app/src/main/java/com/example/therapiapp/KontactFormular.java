@@ -31,14 +31,14 @@ public class KontactFormular extends BaseActivity {
         EditText text = (EditText) findViewById(R.id.editTextTextMultiLine);
         Spinner s = (Spinner) findViewById(R.id.spinnerKontakt);
         if (text.getText().toString().equals("")) {
-            Toast.makeText(getApplicationContext(),"Bitte füllen Sie das Formular aus!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Bitte fülle das Formular aus!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getApplicationContext(),"Bitte warten!", Toast.LENGTH_LONG).show();
             new Handler().postDelayed(new Runnable() {
                 public void run() {
                     text.setText("");
                     finish();
-                    Toast.makeText(getApplicationContext(),"Vielen Dank für Ihr " + s.getSelectedItem().toString() + ". Wir haben Ihre Nachricht erhalten!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Vielen Dank für deine " + s.getSelectedItem().toString() + ". Wir haben deine Nachricht erhalten!", Toast.LENGTH_LONG).show();
                 }
             }, 3000);
         }

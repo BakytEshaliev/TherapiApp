@@ -35,10 +35,10 @@ public class Tagebuch extends BaseActivity{
         String tagesbuchNote = tagesbuchEditText.getText().toString();
         if (!tagesbuchNote.isEmpty()){
             db.addToDiary(new DiaryEntry(LocalDateTime.now(),tagesbuchNote));
-            Toast.makeText(this,"Sie haben einen Eintrag in Ihrem Tagebuch hinzugefügt.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Du hast einen Eintrag in dein Tagebuch hinzugefügt.",Toast.LENGTH_SHORT).show();
             tagesbuchEditText.setText("");
         }else {
-            Toast.makeText(this,"Sie haben nichts in Ihr Tagebuch geschrieben.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Du hast nichts in dein Tagebuch geschrieben.",Toast.LENGTH_SHORT).show();
         }
     }
 

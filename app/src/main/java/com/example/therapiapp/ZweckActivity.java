@@ -25,7 +25,7 @@ public class ZweckActivity extends BaseActivity {
             Intent intent = new Intent(this,Startseite.class);
             startActivity(intent);
             finish();
-        }else Toast.makeText(this,"Wählen Sie mindestens ein Zweck!",Toast.LENGTH_SHORT).show();
+        }else Toast.makeText(this,"Wähle mindestens ein Zweck!",Toast.LENGTH_SHORT).show();
     }
 
     private boolean isSelected(){

@@ -65,13 +65,13 @@ public class DiaryAdapter extends BaseAdapter {
             viewHolder.buttonDel.setOnClickListener((v)->{
                 diaryNotes.remove(position);
                 notifyDataSetChanged();
-                if (diaryNotes.size() == 0) Toast.makeText(v.getContext(), "Es gibt keine Einträge in Ihrem Tagebuch!",Toast.LENGTH_LONG).show();
+                if (diaryNotes.size() == 0) Toast.makeText(v.getContext(), "Es gibt keine Einträge in deinem Tagebuch!",Toast.LENGTH_LONG).show();
             });
             viewHolder.buttonBearb = convertView.findViewById(R.id.buttonBearbeitenEintrag);
             viewHolder.buttonBearb.setOnClickListener((v)->{
                 DiaryEntry note = diaryNotes.get(position);
                 note.setContent(viewHolder.content.getText().toString());
-                Toast.makeText(v.getContext(),"Sie haben eine Änderung an dem Tagebucheintrag vorgenommen.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"Du hast eine Änderung an dem Tagebucheintrag vorgenommen.",Toast.LENGTH_SHORT).show();
             });
             convertView.setTag(viewHolder);
         }else {
