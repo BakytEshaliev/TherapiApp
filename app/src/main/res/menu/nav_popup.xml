@@ -4,7 +4,7 @@
         android:title="Startseite" />
 
     <item android:id="@+id/chat_bot"
-        android:title="Chat Bot" />
+        android:title="Chatbot" />
 
     <item android:id="@+id/tagebuch"
         android:title="Tagebuch" />

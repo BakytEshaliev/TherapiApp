@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ import java.util.Date;
 public class Tagebuch extends BaseActivity{
     private EditText tagesbuchEditText;
     private DButil db;
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class Tagebuch extends BaseActivity{
         setContentView(R.layout.activity_tagesbuch);
         initToolbar("Tagebuch");
 
+//        calendarView.setActivated();
         db = DButil.getInstance();
         tagesbuchEditText = findViewById(R.id.tagesbuchEditText);
     }

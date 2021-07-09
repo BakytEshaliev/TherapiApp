@@ -213,7 +213,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Diese App kann Ihnen bei der Bewältigung von Depressionen helfen und Sie können sich mit einem Therapeuten auseinander setzen." />
+                    android:text="Diese App kann dir bei der Bewältigung von Depressionen helfen und du kannst mit einem Therapeuten auseinandersetzen." />
             </LinearLayout>
 
             <LinearLayout

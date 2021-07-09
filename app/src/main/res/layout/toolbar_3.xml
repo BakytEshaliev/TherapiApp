@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:text="Genki 元気"
+            android:text="Genki"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"

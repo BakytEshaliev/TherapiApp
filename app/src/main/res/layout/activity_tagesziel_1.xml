@@ -8,16 +8,25 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/toolbar_3" />
+        layout="@layout/toolbar_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_bottom" />
+        layout="@layout/toolbar_bottom"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <ScrollView
+        android:id="@+id/scrollView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
