@@ -36,7 +36,7 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="330dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:onClick="toChatBot"
             android:text="ChatBot"
             app:backgroundTint="@color/white" />
@@ -44,7 +44,7 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="330dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:onClick="toTagebuch"
             android:text="Tagebuch"
             app:backgroundTint="@color/white" />
@@ -52,7 +52,7 @@
         <Button
             android:id="@+id/button5"
             android:layout_width="330dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:onClick="toTagesziel"
             android:text="Tagesziel"
             app:backgroundTint="@color/white" />
@@ -60,7 +60,7 @@
         <Button
             android:id="@+id/button6"
             android:layout_width="330dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:onClick="toUbungen"
             android:text="Übungen"
             app:backgroundTint="@color/white" />
@@ -68,7 +68,7 @@
         <Button
             android:id="@+id/button9"
             android:layout_width="330dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:onClick="toWiki"
             android:text="Wiki"
             app:backgroundTint="@color/white" />
