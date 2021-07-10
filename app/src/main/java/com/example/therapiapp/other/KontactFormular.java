@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class KontactFormular extends BaseActivity {
 

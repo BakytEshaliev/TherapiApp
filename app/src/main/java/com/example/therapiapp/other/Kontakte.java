@@ -1,10 +1,13 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class Kontakte extends BaseActivity {
 
@@ -26,7 +29,7 @@ public class Kontakte extends BaseActivity {
     }
 
     public void showNotfallkontakte(View view) {
-        Intent intent = new Intent(this,NotfallKontakte.class);
+        Intent intent = new Intent(this, NotfallKontakte.class);
         startActivity(intent);
     }
 }

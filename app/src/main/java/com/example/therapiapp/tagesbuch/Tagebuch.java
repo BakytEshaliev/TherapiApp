@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.tagesbuch;
 
 import android.content.Intent;
 import android.os.Build;
@@ -11,13 +11,15 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.DiaryEntry;
 import com.example.therapiapp.util.DButil;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Tagebuch extends BaseActivity{
+public class Tagebuch extends BaseActivity {
     private EditText tagesbuchEditText;
     private DButil db;
 

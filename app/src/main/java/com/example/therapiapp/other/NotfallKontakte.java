@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.therapiapp.R;
 
 import static com.example.therapiapp.BaseActivity.TAG;
 

@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.chat_bot;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -18,10 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.therapiapp.chat_bot.ChatListAdapter;
-import com.example.therapiapp.chat_bot.Message;
-import com.example.therapiapp.chat_bot.PhqTest;
-import com.example.therapiapp.chat_bot.QA;
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

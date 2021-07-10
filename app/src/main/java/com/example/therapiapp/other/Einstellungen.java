@@ -1,8 +1,11 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import android.os.Bundle;
 
-public class Einstellungen extends BaseActivity{
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+
+public class Einstellungen extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

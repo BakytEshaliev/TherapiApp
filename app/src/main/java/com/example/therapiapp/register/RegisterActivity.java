@@ -1,14 +1,12 @@
-package com.example.therapiapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+package com.example.therapiapp.register;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toolbar;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+import com.example.therapiapp.other.Datenschutz;
 
 public class RegisterActivity extends BaseActivity {
 

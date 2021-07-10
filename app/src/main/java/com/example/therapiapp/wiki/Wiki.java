@@ -1,18 +1,15 @@
-package com.example.therapiapp;
+package com.example.therapiapp.wiki;
 
-import android.app.SearchManager;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.net.URLEncoder;
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class Wiki extends BaseActivity {
 

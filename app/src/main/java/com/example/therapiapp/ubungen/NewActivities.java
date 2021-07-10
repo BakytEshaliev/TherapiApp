@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.ubungen;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -8,13 +8,15 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.util.DButil;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewActivities extends BaseActivity{
+public class NewActivities extends BaseActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,10 +10,20 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.therapiapp.chat_bot.ChatBot;
+import com.example.therapiapp.other.Einstellungen;
+import com.example.therapiapp.other.Hilfe;
+import com.example.therapiapp.other.Kontakte;
+import com.example.therapiapp.other.NotfallKontakte;
+import com.example.therapiapp.other.Profil;
+import com.example.therapiapp.tagesbuch.Tagebuch;
+import com.example.therapiapp.tagesziel.Tagesziel;
+import com.example.therapiapp.ubungen.Activities;
+
+import com.example.therapiapp.wiki.Wiki;
 
 public abstract class BaseActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
@@ -115,7 +125,7 @@ public abstract class BaseActivity extends AppCompatActivity implements PopupMen
         startActivity(getIntent());
     }
     public void handleHerzClick(View view){
-        Intent intent = new Intent(this,NotfallKontakte.class);
+        Intent intent = new Intent(this, NotfallKontakte.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }

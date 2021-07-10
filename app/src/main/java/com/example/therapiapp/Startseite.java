@@ -5,7 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatDelegate;
+
+import com.example.therapiapp.chat_bot.ChatBot;
+import com.example.therapiapp.tagesbuch.Tagebuch;
+import com.example.therapiapp.tagesziel.Tagesziel;
+import com.example.therapiapp.ubungen.Activities;
+import com.example.therapiapp.wiki.Wiki;
 
 public class Startseite extends BaseActivity {
 

@@ -1,10 +1,11 @@
-package com.example.therapiapp;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.therapiapp.register;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class AnmeldingErfolgreich extends BaseActivity {
 

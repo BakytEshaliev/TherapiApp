@@ -1,11 +1,15 @@
-package com.example.therapiapp;
+package com.example.therapiapp.ubungen;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
-public class SelectActivityType extends BaseActivity{
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+import com.example.therapiapp.ubungen.NewActivities;
+
+public class SelectActivityType extends BaseActivity {
     private String from;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
