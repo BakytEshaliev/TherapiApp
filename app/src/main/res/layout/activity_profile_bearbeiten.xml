@@ -14,8 +14,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout10"
-        android:layout_width="273dp"
-        android:layout_height="368dp"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="57dp"
         android:layout_marginTop="81dp"
         android:layout_marginEnd="81dp"
@@ -55,20 +55,21 @@
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_marginTop="20dp"
-            android:entries="@array/languages"/>
+            android:entries="@array/languages" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="67dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="95dp"
-        android:layout_marginTop="46dp"
         android:layout_marginEnd="120dp"
+        android:layout_marginBottom="64dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button14"
