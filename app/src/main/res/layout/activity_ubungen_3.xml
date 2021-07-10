@@ -22,10 +22,11 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="358dp"
-        android:layout_height="513dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
@@ -33,7 +34,8 @@
             android:id="@+id/linearLayout11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <TextView
@@ -99,18 +101,19 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="168dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Übung starten"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
         </LinearLayout>
-    </ScrollView>
 
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="168dp"
-        android:layout_height="58dp"
-        android:text="Übung starten"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

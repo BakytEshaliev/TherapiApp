@@ -55,7 +55,8 @@ public class WikiAdapter extends RecyclerView.Adapter<WikiAdapter.WikiViewHolder
             Bundle b = new Bundle();
             b.putString("name", wikiModel.getName());
             b.putString("description", wikiModel.getDescription());
-            b.putString("source", wikiModel.getSource());
+            String source = wikiModel.getSource();
+            b.putString("source", source);
             Intent intent = new Intent(context, WikiItem.class);
             intent.putExtras(b);
             context.startActivity(intent);

@@ -1,6 +1,7 @@
 package com.example.therapiapp.wiki;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,7 @@ public class WikiItem extends BaseActivity {
         TextView name = findViewById(R.id.wiki_name_in_info);
         TextView description = findViewById(R.id.wiki_descriprion);
         TextView source = findViewById(R.id.wiki_source);
-
+        source.setPaintFlags(source.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         Bundle b = getIntent().getExtras();
         String nameStr = b.getString("name");
         String descriptionStr = b.getString("description");

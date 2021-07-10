@@ -22,13 +22,15 @@
 
     <EditText
         android:id="@+id/activityContent"
-        android:layout_width="344dp"
-        android:layout_height="340dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="356dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="28dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
@@ -54,9 +56,8 @@
             android:layout_height="43dp"
             android:layout_gravity="left"
             android:layout_marginRight="30dp"
-            android:textSize="96sp"
             android:enabled="false"
-            />
+            android:textSize="96sp" />
 
         <TextView
             android:id="@+id/activityName"
@@ -83,10 +84,10 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="86dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/activityContent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="2dp">
 
         <Button
