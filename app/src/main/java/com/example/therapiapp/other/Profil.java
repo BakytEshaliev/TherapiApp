@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import android.content.Intent;
 import android.os.Build;
@@ -11,12 +11,12 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.widget.Toolbar;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.MainActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
-
-import java.io.Serializable;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class Profil extends BaseActivity {
@@ -58,7 +58,7 @@ public class Profil extends BaseActivity {
     }
 
     public void handleProfileBearbeiten(View view) {
-        Intent intent = new Intent(this,ProfileBearbeiten.class);
+        Intent intent = new Intent(this, ProfileBearbeiten.class);
         intent.putExtra("user",dButil.getDefaultUser());
         startActivityForResult(intent,0);
     }

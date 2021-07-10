@@ -1,9 +1,8 @@
-package com.example.therapiapp;
+package com.example.therapiapp.ubungen;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.util.DButil;
 

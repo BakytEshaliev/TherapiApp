@@ -1,22 +1,16 @@
-package com.example.therapiapp;
+package com.example.therapiapp.tagesbuch;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.therapiapp.model.DiaryEntry;
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+import com.example.therapiapp.tagesbuch.DiaryAdapter;
 import com.example.therapiapp.util.DButil;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
 
 public class TagesbuchList extends BaseActivity {
 

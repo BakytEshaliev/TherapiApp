@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.ubungen;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.util.DButil;
 

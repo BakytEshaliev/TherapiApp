@@ -1,23 +1,19 @@
-package com.example.therapiapp;
+package com.example.therapiapp.ubungen;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.therapiapp.chat_bot.Message;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.util.DButil;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClosedActivitiesAdapter extends RecyclerView.Adapter<ClosedActivitiesAdapter.ClosedActivitiesViewHolder> {

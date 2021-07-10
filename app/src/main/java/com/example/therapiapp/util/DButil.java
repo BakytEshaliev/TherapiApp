@@ -4,7 +4,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.example.therapiapp.Wiki;
 import com.example.therapiapp.model.Activity;
 import com.example.therapiapp.model.DiaryEntry;
 import com.example.therapiapp.model.Language;
@@ -14,10 +13,6 @@ import com.example.therapiapp.model.enum_model.WikiType;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
-
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class DButil {

@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.tagesziel;
 
 import android.content.Intent;
 import android.os.Build;
@@ -13,7 +13,11 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Activity;
+import com.example.therapiapp.ubungen.OpenActivityItem;
+import com.example.therapiapp.ubungen.SelectActivityType;
 import com.example.therapiapp.util.DButil;
 
 public class Tagesziel extends BaseActivity {

@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.tagesbuch;
 
 import android.content.Context;
 import android.os.Build;
@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.DiaryEntry;
 
 import java.text.DateFormat;

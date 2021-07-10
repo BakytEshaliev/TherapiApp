@@ -1,15 +1,16 @@
-package com.example.therapiapp;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+package com.example.therapiapp.register;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.MainActivity;
+import com.example.therapiapp.R;
+
 
 public class Registrierung2 extends BaseActivity {
     EditText editText;
@@ -27,7 +28,7 @@ public class Registrierung2 extends BaseActivity {
     public void handleBestatigen(View view) {
         Editable text = editText.getText();
         if (text.toString().equals("12345")){
-            Intent intent = new Intent(this,MainActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             Toast.makeText(view.getContext(), "Du hast den Code bestätigt", Toast.LENGTH_SHORT).show(); text.clear();

@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+import com.example.therapiapp.Startseite;
 
 public class ZweckActivity extends BaseActivity {
     private CheckBox zweckZB1;
@@ -22,7 +26,7 @@ public class ZweckActivity extends BaseActivity {
     }
     public void weiterClick(View view){
         if (isSelected()){
-            Intent intent = new Intent(this,Startseite.class);
+            Intent intent = new Intent(this, Startseite.class);
             startActivity(intent);
             finish();
         }else Toast.makeText(this,"Wähle mindestens ein Zweck!",Toast.LENGTH_SHORT).show();

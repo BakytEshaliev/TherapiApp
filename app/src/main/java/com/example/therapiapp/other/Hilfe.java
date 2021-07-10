@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.appcompat.widget.Toolbar;
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class Hilfe extends BaseActivity {
 

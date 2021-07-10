@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registrierung2">
+    tools:context=".register.Registrierung2">
 
     <include layout="@layout/toolbar_3" />
 

@@ -1,26 +1,20 @@
 package com.example.therapiapp;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.sax.StartElementListener;
 import android.util.Log;
-import android.view.GestureDetector;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.therapiapp.model.User;
+import com.example.therapiapp.register.AnmeldingErfolgreich;
+import com.example.therapiapp.register.RegisterActivity;
 import com.example.therapiapp.util.DButil;
 
 @RequiresApi(api = Build.VERSION_CODES.O)

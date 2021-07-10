@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -6,7 +6,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Datenschutz extends BaseActivity{
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
+
+public class Datenschutz extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

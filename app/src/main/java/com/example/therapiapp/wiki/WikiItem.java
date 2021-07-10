@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.wiki;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 
 public class WikiItem extends BaseActivity {
     @Override

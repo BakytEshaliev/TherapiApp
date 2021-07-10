@@ -1,4 +1,4 @@
-package com.example.therapiapp;
+package com.example.therapiapp.other;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.therapiapp.BaseActivity;
+import com.example.therapiapp.R;
 import com.example.therapiapp.model.Language;
 import com.example.therapiapp.model.User;
 import com.example.therapiapp.util.DButil;
