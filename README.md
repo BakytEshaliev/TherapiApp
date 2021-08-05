@@ -2,8 +2,15 @@
 Check commits to see my real number of commits
 
 # TherapiApp
-Therapeutische App für Jugendliche gegen Depressionen
-
+This is android application against teenage depression. Application was developed during Software Engineering class as a group project.
+My task was to programm 3 functions:
+<li> Daily activity (Tagesziel)
+In this part you can select any Activity, check information, fill results of activity, cancel activity, mark activity as done
+<li> Activities (Übungen)
+In this part you can see your daily activity and do any manipulations with them that was covered in previos part and select new daily activity if you don't have.
+<li> Wiki
+Main idea of this part is to give to users more information about depression, stress etc. My task was to implement list of topics, each topic show information when you click on it and to implement search function.
+  
 ![A4F93F41-DC43-446B-B011-CE29DCCDB43B](https://user-images.githubusercontent.com/39187339/128358334-02d88acd-39eb-4a01-8347-fd1ef8bfbd4a.jpeg)
 ![6C76A67D-1629-400A-866E-FB275F0C9F6F](https://user-images.githubusercontent.com/39187339/128358344-ab6c5e9f-10e4-4eb8-ad4c-492d804273fa.jpeg)
 ![50C7BDE3-5FC5-49B3-B44F-A42954F056CB](https://user-images.githubusercontent.com/39187339/128358347-ad8286c4-43f9-4b0f-b861-a90041caa63b.jpeg)
